@@ -61,4 +61,9 @@
     wowup-cf
     obsidian
   ];
+
+  fonts.packages = with pkgs; [
+    (nerdfonts.override { fonts = [ "Hermit" "JetBrainsMono" ]; })
+    font-awesome
+  ];
 }
