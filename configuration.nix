@@ -3,16 +3,18 @@
 {
   imports = [
     ./modules/hardware.nix
-    inputs.home-manager.nixosModules.default
     ./modules/packages.nix
     ./modules/services.nix
     ./modules/users.nix
     ./modules/networking.nix
+    ./modules/programs.nix
+    inputs.home-manager.nixosModules.default
   ];
 
   # Other configurations...
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
+
   time.timeZone = "America/New_York";
   i18n.defaultLocale = "en_US.UTF-8";
   i18n.extraLocaleSettings = {
@@ -26,34 +28,13 @@
     LC_TELEPHONE = "en_US.UTF-8";
     LC_TIME = "en_US.UTF-8";
   };
-  hardware.opengl = {
-    enable = true;
-    driSupport = true;
-    driSupport32Bit = true;
-  };
-  hardware.nvidia = {
-    modesetting.enable = true;
-    powerManagement.enable = false;
-    powerManagement.finegrained = false;
-    open = false;
-    nvidiaSettings = true;
-    package = config.boot.kernelPackages.nvidiaPackages.stable;
-    prime.sync.enable = true;
-    prime.nvidiaBusId = "PCI:1:0:0";
-    prime.amdgpuBusId = "PCI:4:0:0";
-  };
-  sound.enable = true;
-  hardware.pulseaudio.enable = false;
+
   security.rtkit.enable = true;
-  fonts.packages = with pkgs; [
-    (nerdfonts.override { fonts = [ "Hermit" "JetBrainsMono" ]; })
-    font-awesome
-  ];
-  programs.steam = {
-    enable = true;
-    remotePlay.openFirewall = true;
-    dedicatedServer.openFirewall = true;
-  };
+
+  # needed for qemu & virt-manager virtualizartion
+  virtualisation.spiceUSBRedirection.enable = true;
+  virtualisation.libvirtd.enable = true;
+
   nixpkgs.config.allowUnfree = true;
   system.stateVersion = "24.05";
 }

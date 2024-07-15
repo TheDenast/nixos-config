@@ -5,6 +5,21 @@
   services.displayManager.sddm.enable = true;
   services.xserver.desktopManager.plasma5.enable = true;
 
+  # Needed for secret saving on hyprland
+  services.gnome.gnome-keyring.enable = true;
+
+  # Load nvidia driver for Xorg and Wayland
+  services.xserver.videoDrivers = [
+    "nvidia"
+    "amdgpu"
+  ];
+
+  # Configure keymap in X11
+  services.xserver = {
+    xkb.layout = "us";
+    xkb.variant = "";
+  };
+
   services.blueman.enable = true;
 
   services.printing.enable = true;
