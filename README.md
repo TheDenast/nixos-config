@@ -20,23 +20,6 @@
    sudo nixos-rebuild switch --flake /home/denast/.nixos-config#default
    ```
 
-### Example Commands
-
-1. **Clone the Configuration Repository:**
-   ```sh
-   git clone https://github.com/yourusername/nixos-config.git /home/denast/.nixos-config
-   ```
-
-2. **Create a Symlink to `/etc/nixos`:**
-   ```sh
-   sudo ln -s /home/denast/.nixos-config /etc/nixos
-   ```
-
-3. **Rebuild the System:**
-   ```sh
-   sudo nixos-rebuild switch --flake /home/denast/.nixos-config#default
-   ```
-
 ### Regular Updates
 
 1. **Make Changes to the Configuration:**
