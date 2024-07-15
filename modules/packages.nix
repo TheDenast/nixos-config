@@ -31,7 +31,8 @@
     ncdu        # nifty util to see disk space usage
     wineWowPackages.stable # wine for windows apps
     winetricks  # used for more advanced wine settings
-    gnome3.adwaita-icon-theme # for gtk icons
+    dracula-theme
+    dracula-icon-theme
     lxqt.lxqt-policykit # polkit for GUI sudo authentication
     telegram-desktop # messaging
     webcord     # containerized discord version
