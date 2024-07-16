@@ -61,6 +61,9 @@
     virt-manager
     wowup-cf
     obsidian
+    clang-tools
+    bfetch
+    pfetch
   ];
 
   fonts.packages = with pkgs; [
