@@ -20,6 +20,7 @@
     nvtopPackages.full # GPU monitor
     tmux        # terminal window mux
     ncdu        # nifty util to see disk space usage
+    tree        # lists dir contents as a tree
 
     # OS-Utils
     waybar      # bar for hyprland
