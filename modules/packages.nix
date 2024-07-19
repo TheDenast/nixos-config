@@ -58,6 +58,7 @@
     gcc         # C compiler
     clang-tools # clandg toolkit
     python3     # Python compiler/interpreter
+    gnumake     # Makefile support
 
     # Productivity
     obsidian    # notes / knowledge base
