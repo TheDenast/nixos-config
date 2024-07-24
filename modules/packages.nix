@@ -42,6 +42,7 @@
     swappy      # screenshot tool
     xwaylandvideobridge # allows screencapture for X.org apps
     openrazer-daemon # allows to use razer devices
+    xorg.xhost
 
     # CLI-Utils
     fd          # file search
