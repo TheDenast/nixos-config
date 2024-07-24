@@ -31,9 +31,12 @@
 
   security.rtkit.enable = true;
 
-  # needed for qemu & virt-manager virtualizartion
+  # needed for qemu & virt-manager virtualisation 
   virtualisation.spiceUSBRedirection.enable = true;
   virtualisation.libvirtd.enable = true;
+
+  # android virtualisation
+  virtualisation.waydroid.enable = true;
 
   nixpkgs.config.allowUnfree = true;
   system.stateVersion = "24.05";
