@@ -8,6 +8,7 @@
     bfetch      # utility to center and organize fetch apps
     dracula-theme # dracula gtk theme
     dracula-icon-theme # icons for gtk
+    where-is-my-sddm-theme # minimalist sddm theme
 
     # CLI
     kitty       # terminal emulator
@@ -61,6 +62,7 @@
     clang-tools # clandg toolkit
     python3     # Python compiler/interpreter
     gnumake     # Makefile support
+    #(pkgs.callPackage ./cursorsh.nix {})
 
     # Productivity
     obsidian    # notes / knowledge base

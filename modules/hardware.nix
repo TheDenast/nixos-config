@@ -46,10 +46,8 @@
   # for razer mice
   hardware.openrazer.enable = true;
 
-  hardware.opengl = {
+  hardware.graphics= {
     enable = true;
-    driSupport = true;
-    driSupport32Bit = true;
   };
   hardware.nvidia = {
     modesetting.enable = true;
@@ -62,6 +60,5 @@
     prime.nvidiaBusId = "PCI:1:0:0";
     prime.amdgpuBusId = "PCI:4:0:0";
   };
-  sound.enable = true;
   hardware.pulseaudio.enable = false;
 }
