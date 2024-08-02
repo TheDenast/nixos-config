@@ -1,0 +1,71 @@
+@import url("./colors.css");
+* {
+    border: none;
+    border-radius: 0;
+    font-family: "JetBrainsMonoNL Nerd Font Mono";
+    font-size: 14pt;
+    min-height: 0;
+    font-weight: 400;
+}
+window#waybar {
+    opacity: 0.9;
+    background: transparent;
+    color: @theme_text_color;
+}
+#workspaces button {
+    padding: 0 15px;
+    background: @background;
+    color: @foreground;
+}
+#workspaces button:hover {
+    box-shadow: inherit;
+    text-shadow: inherit;
+    background-image: linear-gradient(0deg, @selection, @background-darker);
+}
+#workspaces button.active {
+    background-image: linear-gradient(0deg, @purple, @selection);
+    border-radius: 5px;
+}
+#taskbar button.active {
+    background-image: linear-gradient(0deg, @selection, @background-darker);
+}
+#clock {
+    padding: 0 15px;
+    background: @background;
+    /*background-image: linear-gradient(0deg, @purple, @background-darker); */
+    border-radius: 5px;
+    color: @purple;
+}
+#tray {
+  padding: 0 15px;
+  background: linear-gradient(0deg, @purple, @background-darker);
+  border-radius: 5px;
+}
+#battery {
+    padding: 0 10px;
+    background: linear-gradient(0deg, @purple, @background-darker);
+    color: white;
+    border: none;
+    border-radius: 10px;
+}
+
+#battery.warning {
+    background-color: rgba(255, 165, 0, 0.8); /* Orange for warning */
+}
+
+#battery.critical {
+    background-color: rgba(255, 0, 0, 0.8); /* Red for critical */
+}
+
+#battery.charging {
+    background-color: rgba(0, 255, 0, 0.8); /* Green when charging */
+}
+
+#battery.full {
+    background-color: rgba(0, 0, 255, 0.8); /* Blue when fully charged */
+}
+
+#battery.disconnected {
+    background-color: rgba(128, 128, 128, 0.8); /* Grey when no battery detected */
+}
+

@@ -1,0 +1,16 @@
+lastupdatecheck: 0
+recentrepos:
+    - /home/denast/Projects/current_eval_c
+    - /home/denast/.nixos-config
+    - /home/denast/Projects/project_abzu
+    - /home/denast/Projects/denast.dev
+startuppopupversion: 5
+lastversion: 0.42.0
+customcommandshistory: []
+hidecommandlog: false
+ignorewhitespaceindiffview: false
+diffcontextsize: 3
+localbranchsortorder: recency
+remotebranchsortorder: alphabetical
+gitlogorder: topo-order
+gitlogshowgraph: always
