@@ -1,0 +1,52 @@
+{
+  "layer": "top",
+  "position": "top",
+  "height": 24,
+  "spacing": 0,
+  "modules-left": [
+    "hyprland/workspaces"
+  ],
+  "modules-center": [
+    "clock"
+  ],
+  "modules-right": [
+    "tray","battery"
+  ],
+  "hyprland/workspaces": {
+    "format": "{icon}",
+    "on-click": "activate",
+    "format-icons": {
+     "1": "<span font=\"FontAwesome 6 Free Solid\"></span>",
+     "2": "<span font=\"FontAwesome 6 Free Solid\"></span>",
+     "3": "<span font=\"FontAwesome 6 Free Solid\"></span>",
+     "4": "<span font=\"FontAwesome 6 Free Solid\"></span>",
+     "5": "<span font=\"FontAwesome 6 Free Solid\"></span>",
+     "urgent": "",
+     "default": ""
+    },
+    "sort-by-number": true
+  },
+  "clock": {
+    "format": "{:%H:%M}",
+    "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
+  },
+  "tray": {
+    "spacing": 4
+  },
+  "battery": {
+    "bat": "BAT0",
+    "adapter": "ADP1",
+    "format": "{capacity}% ",
+    "format-discharging": "{capacity}% ",
+    "format-charging": "{capacity}% ",
+    "format-full": "{capacity}% ",
+    "format-plugged": "{icon} Plugged in, not charging",
+    "format-unknown": "Unknown",
+    "on-click": "gnome-power-statistics",
+    "states": {
+        "warning": 15,
+        "critical": 5
+    },
+    "tooltip": false
+  }
+}
