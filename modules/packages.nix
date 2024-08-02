@@ -43,7 +43,6 @@
     swappy      # screenshot tool
     xwaylandvideobridge # allows screencapture for X.org apps
     openrazer-daemon # allows to use razer devices
-    xorg.xhost
 
     # CLI-Utils
     fd          # file search
@@ -52,6 +51,8 @@
     jq          # json parser
     zip         # zip archive support
     unzip       # handy to quickly unpack zips
+    sshfs       # mount filesystems over ssh
+    nodejs_22   # javasript stuff
 
     # Codin'
     vim         # grandpa
@@ -62,6 +63,7 @@
     clang-tools # clandg toolkit
     python3     # Python compiler/interpreter
     gnumake     # Makefile support
+    valgrind    # Memory management analysis tool
     #(pkgs.callPackage ./cursorsh.nix {})
 
     # Productivity
@@ -77,8 +79,9 @@
 
     # Social
     telegram-desktop # messaging
-    webcord     # containerized discord web version
-    discord     # when webcord misbehaves
+    # webcord     # containerized discord web version
+    # discord     # when webcord misbehaves
+    vesktop     # containerized discord w/ fixed screen share
 
     # Office
     libreoffice-qt6-still # office suit
