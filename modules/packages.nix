@@ -1,11 +1,16 @@
 { config, pkgs, ... }:
 
+let
+  cursorsh = pkgs.callPackage ./cursorsh.nix {};
+in
 {
   environment.systemPackages = with pkgs; [
     # Eye Candy
     neofetch    # >:P
     pfetch      # minimal neofetch alternative
     bfetch      # utility to center and organize fetch apps
+    gtk2
+    gtk3
     dracula-theme # dracula gtk theme
     dracula-icon-theme # icons for gtk
     where-is-my-sddm-theme # minimalist sddm theme
@@ -64,7 +69,7 @@
     python3     # Python compiler/interpreter
     gnumake     # Makefile support
     valgrind    # Memory management analysis tool
-    #(pkgs.callPackage ./cursorsh.nix {})
+    cursorsh    # AI IDE
 
     # Productivity
     obsidian    # notes / knowledge base
