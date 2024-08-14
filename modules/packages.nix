@@ -46,6 +46,7 @@ in
     grim        # grap wayland images
     slurp       # select part of wayland workspace
     swappy      # screenshot tool
+    flameshot   # all-in-one screenshot tool
     xwaylandvideobridge # allows screencapture for X.org apps
     openrazer-daemon # allows to use razer devices
 
@@ -70,6 +71,7 @@ in
     gnumake     # Makefile support
     valgrind    # Memory management analysis tool
     cursorsh    # AI IDE
+    stm32cubemx # STM32 Microcontroller IDE
 
     # Productivity
     obsidian    # notes / knowledge base
@@ -96,6 +98,8 @@ in
     qemu        # virtualization tool
     virt-manager # qemu gui frontend
     polychromatic # razer RGB configuration
+    mpv         # minimalist video player
+    nsxiv       # minimalist image viewer
 
   ];
 
