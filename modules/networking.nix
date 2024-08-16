@@ -2,5 +2,5 @@
 
 {
   networking.networkmanager.enable = true;
-  networking.hostName = "denastPC";
+  networking.hostName = "denastG14";
 }
