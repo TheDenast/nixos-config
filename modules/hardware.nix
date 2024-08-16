@@ -6,7 +6,8 @@
   ];
 
   # Custom boot settings
-  boot.kernelPackages = pkgs.linuxPackages_6_9;
+  # boot.kernelPackages = pkgs.linuxPackages_6_9;
+  boot.kernelPackages = pkgs.linuxPackages_latest;
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
   boot.initrd.luks.devices."luks-d16b5f87-310e-4d97-9c6d-39ec9b6cd648".device = "/dev/disk/by-uuid/d16b5f87-310e-4d97-9c6d-39ec9b6cd648";
@@ -48,8 +49,6 @@
 
   hardware.opengl = {
     enable = true;
-    driSupport = true;
-    driSupport32Bit = true;
   };
   hardware.nvidia = {
     modesetting.enable = true;
@@ -62,6 +61,5 @@
     prime.nvidiaBusId = "PCI:1:0:0";
     prime.amdgpuBusId = "PCI:4:0:0";
   };
-  sound.enable = true;
   hardware.pulseaudio.enable = false;
 }

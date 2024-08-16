@@ -14,6 +14,7 @@ in
     dracula-theme # dracula gtk theme
     dracula-icon-theme # icons for gtk
     where-is-my-sddm-theme # minimalist sddm theme
+    bibata-cursors # cursor theme for gtk
 
     # CLI
     kitty       # terminal emulator
@@ -70,7 +71,7 @@ in
     python3     # Python compiler/interpreter
     gnumake     # Makefile support
     valgrind    # Memory management analysis tool
-    cursorsh    # AI IDE
+    #cursorsh    # AI IDE
     stm32cubemx # STM32 Microcontroller IDE
 
     # Productivity
@@ -97,9 +98,11 @@ in
     chromium    # for when firefox doesn't render something right
     qemu        # virtualization tool
     virt-manager # qemu gui frontend
+    virtiofsd   # virtual filesystems to share dirs with guest virt machines
     polychromatic # razer RGB configuration
     mpv         # minimalist video player
     nsxiv       # minimalist image viewer
+    obs-studio  # screen recording tool
 
   ];
 
