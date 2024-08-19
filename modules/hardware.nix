@@ -47,7 +47,7 @@
   # for razer mice
   hardware.openrazer.enable = true;
 
-  hardware.opengl = {
+  hardware.graphics= {
     enable = true;
   };
   hardware.nvidia = {
