@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ pkgs, ... }:
 
 let
   cursorsh = pkgs.callPackage ./cursorsh.nix {};
@@ -71,8 +71,10 @@ in
     python3     # Python compiler/interpreter
     gnumake     # Makefile support
     valgrind    # Memory management analysis tool
-    #cursorsh    # AI IDE
+    cursorsh    # AI IDE
     stm32cubemx # STM32 Microcontroller IDE
+    rustc       # Rust compiler
+    cargo       # Rust dependencies manager
 
     # Productivity
     obsidian    # notes / knowledge base
