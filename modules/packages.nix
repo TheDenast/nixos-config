@@ -105,6 +105,7 @@ in
     mpv         # minimalist video player
     nsxiv       # minimalist image viewer
     obs-studio  # screen recording tool
+    mullvad-browser # hardened firefox fork from mullvad
 
   ];
 
