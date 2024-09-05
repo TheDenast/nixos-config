@@ -28,6 +28,12 @@ in
     tmux        # terminal window mux
     ncdu        # nifty util to see disk space usage
     tree        # lists dir contents as a tree
+    fzf         # fuzzy finder for cli
+    zoxide      # fancy `cd` alternative with autocompletition
+    tldr        # `man` alternative with simplified explanations
+    eza         # modern `ls` alternative
+    bat         # modern `cat` alternative
+    yazi        # modern cli file manager
 
     # OS-Utils
     waybar      # bar for hyprland
@@ -111,7 +117,8 @@ in
 
   # Font definitions
   fonts.packages = with pkgs; [
-    (nerdfonts.override { fonts = [ "Hermit" "JetBrainsMono" ]; })
+    (nerdfonts.override { fonts = [ "Hermit" "JetBrainsMono"]; })
     font-awesome
+    monocraft
   ];
 }
