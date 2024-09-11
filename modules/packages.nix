@@ -98,6 +98,7 @@ in
     # webcord     # containerized discord web version
     # discord     # when webcord misbehaves
     vesktop     # containerized discord w/ fixed screen share
+    slack       # messaging app I use @ work
 
     # Office
     libreoffice-qt6-still # office suit
@@ -112,6 +113,8 @@ in
     nsxiv       # minimalist image viewer
     obs-studio  # screen recording tool
     mullvad-browser # hardened firefox fork from mullvad
+    pgadmin4-desktopmode # Administration and development platform for PostgreSQL
+    gimp        # image editor
 
   ];
 

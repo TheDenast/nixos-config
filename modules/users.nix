@@ -1,4 +1,4 @@
-{ pkgs, inputs, ... }:
+{ pkgs, ... }:
 
 {
   users.users.denast = {
@@ -10,10 +10,5 @@
     ];
   };
 
-  home-manager = {
-    extraSpecialArgs = { inherit inputs; };
-    users = {
-      "denast" = import ../home.nix;
-    };
-  };
+  # Remove the home-manager configuration from here
 }

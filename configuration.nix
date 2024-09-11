@@ -1,8 +1,7 @@
-{ inputs, ... }:
+{ inputs, lib, ... }:
 
 {
   imports = [
-    ./modules/hardware.nix
     ./modules/packages.nix
     ./modules/services.nix
     ./modules/users.nix
@@ -10,8 +9,6 @@
     ./modules/programs.nix
     inputs.home-manager.nixosModules.default
   ];
-
-  # Other configurations...
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
