@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ config, pkgs, ... }:
 
 {
   # Home Manager needs a bit of information about you and the
@@ -24,6 +24,25 @@
 
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
+
+  home.file = {
+    ".config/btop".source = config.lib.file.mkOutOfStoreSymlink "/home/denast/.nixos-config/dotfiles/btop";
+    ".config/dunst".source = config.lib.file.mkOutOfStoreSymlink "/home/denast/.nixos-config/dotfiles/dunst";
+    ".config/fish".source = config.lib.file.mkOutOfStoreSymlink "/home/denast/.nixos-config/dotfiles/fish";
+    ".config/fusuma".source = config.lib.file.mkOutOfStoreSymlink "/home/denast/.nixos-config/dotfiles/fusuma";
+    ".config/hypr".source = config.lib.file.mkOutOfStoreSymlink "/home/denast/.nixos-config/dotfiles/hypr";
+    ".config/kitty".source = config.lib.file.mkOutOfStoreSymlink "/home/denast/.nixos-config/dotfiles/kitty";
+    ".config/lazygit".source = config.lib.file.mkOutOfStoreSymlink "/home/denast/.nixos-config/dotfiles/lazygit";
+    ".config/mimeapps.list".source = config.lib.file.mkOutOfStoreSymlink "/home/denast/.nixos-config/dotfiles/mimeapps.list";
+    ".config/neofetch".source = config.lib.file.mkOutOfStoreSymlink "/home/denast/.nixos-config/dotfiles/neofetch";
+    ".config/nvim".source = config.lib.file.mkOutOfStoreSymlink "/home/denast/.nixos-config/dotfiles/nvim";
+    ".config/ranger".source = config.lib.file.mkOutOfStoreSymlink "/home/denast/.nixos-config/dotfiles/ranger";
+    ".config/rofi".source = config.lib.file.mkOutOfStoreSymlink "/home/denast/.nixos-config/dotfiles/rofi";
+    ".config/starship.toml".source = config.lib.file.mkOutOfStoreSymlink "/home/denast/.nixos-config/dotfiles/starship.toml";
+    ".config/swappy".source = config.lib.file.mkOutOfStoreSymlink "/home/denast/.nixos-config/dotfiles/swappy";
+    ".config/waybar".source = config.lib.file.mkOutOfStoreSymlink "/home/denast/.nixos-config/dotfiles/waybar";
+    ".config/wofi".source = config.lib.file.mkOutOfStoreSymlink "/home/denast/.nixos-config/dotfiles/wofi";
+  };
 
   home.pointerCursor = {
     gtk.enable = true;

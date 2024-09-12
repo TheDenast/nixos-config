@@ -1,6 +1,7 @@
 # This file contains fish universal variable definitions.
 # VERSION: 3.0
 SETUVAR --export BFETCH_INFO:pfetch
+SETUVAR --export EDITOR:nvim
 SETUVAR --export VISUAL:nvim
 SETUVAR __fish_initialized:3400
 SETUVAR fish_color_autosuggestion:BD93F9
