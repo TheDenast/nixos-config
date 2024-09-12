@@ -2,7 +2,6 @@
 
 {
   networking.networkmanager.enable = true;
-  networking.hostName = "denastG14";
 
   networking.firewall = {
     enable = true;

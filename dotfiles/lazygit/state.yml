@@ -1,9 +1,6 @@
 lastupdatecheck: 0
 recentrepos:
     - /home/denast/.nixos-config
-    - /home/denast/Projects/work/current_eval_c
-    - /home/denast/Projects/work/ManufacturingScript
-    - /home/denast/Projects/denast.dev
 startuppopupversion: 5
 lastversion: 0.44.0
 customcommandshistory: []
