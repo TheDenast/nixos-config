@@ -24,7 +24,7 @@ in
     lshw        # ls hardware
     btop        # resource monitor
     powertop    # laptop power monitor
-    nvtopPackages.full # GPU monitor
+    #nvtopPackages.full # GPU monitor
     tmux        # terminal window mux
     ncdu        # nifty util to see disk space usage
     tree        # lists dir contents as a tree
@@ -77,7 +77,7 @@ in
     python3     # Python compiler/interpreter
     gnumake     # Makefile support
     valgrind    # Memory management analysis tool
-    cursorsh    # AI IDE
+    #cursorsh    # AI IDE
     stm32cubemx # STM32 Microcontroller IDE
     rustc       # Rust compiler
     cargo       # Rust dependencies manager
