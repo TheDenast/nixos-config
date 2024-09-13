@@ -8,6 +8,8 @@
     [ (modulesPath + "/installer/scan/not-detected.nix")
     ];
 
+  boot.kernelPackages = pkgs.linuxPackages_latest;
+
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
@@ -21,6 +23,7 @@
       fsType = "ext4";
     };
 
+  boot.initrd.luks.devices."luks-08590cd3-3382-4dab-9105-563597bafc67".device = "/dev/disk/by-uuid/08590cd3-3382-4dab-9105-563597bafc67";
   boot.initrd.luks.devices."luks-258f7838-387b-4f19-b0ed-ebe2678fdbe4".device = "/dev/disk/by-uuid/258f7838-387b-4f19-b0ed-ebe2678fdbe4";
 
   fileSystems."/boot" =
@@ -42,4 +45,13 @@
 
   nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
   hardware.cpu.amd.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
+
+  # Enable bluetooth
+  hardware.bluetooth.enable = true; # enables support for Bluetooth
+  hardware.bluetooth.powerOnBoot = true; # powers up the default Bluetooth controller on boot
+  services.blueman.enable = true;
+
+  hardware.graphics= {
+    enable = true;
+  };
 }

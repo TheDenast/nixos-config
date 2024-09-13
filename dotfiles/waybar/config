@@ -62,13 +62,13 @@
     "spacing": 4
   },
   "battery": {
-    "bat": "BAT0",
-    "adapter": "ADP1",
+    "bat": "BAT1",
+    "adapter": "ACAD",
     "format": "{capacity}% ",
     "format-discharging": "{capacity}% ",
-    "format-charging": "{capacity}% ",
+    "format-charging": "{capacity}% ",
     "format-full": "{capacity}% ",
-    "format-plugged": "{icon} Plugged in, not charging",
+    "format-plugged": "",
     "format-unknown": "Unknown",
     "on-click": "gnome-power-statistics",
     "states": {
