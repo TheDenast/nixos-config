@@ -57,20 +57,29 @@
     configDir = "/home/denast/.config/syncthing";
   };
 
-  services.supergfxd.enable = true;
-
-  services.asusd = {
-    enable = true;
-    enableUserService = true;
+  # Fingerprint reader stuff
+  systemd.services.fprintd = {
+    wantedBy = [ "multi-user.target" ];
+    serviceConfig.Type = "simple";
   };
 
-  services.udev.packages = [
-    (pkgs.writeTextFile {
-      name = "49-stlinkv2.rules";
-      destination = "/etc/udev/rules.d/49-stlinkv2.rules";
-      text = ''
-        SUBSYSTEMS=="usb", ATTRS{idVendor}=="0483", ATTRS{idProduct}=="374b", GROUP="users", MODE="0666"
-      '';
-    })
-  ];
+  # Install the driver
+  services.fprintd.enable = true;
+
+  # services.supergfxd.enable = true;
+
+  # services.asusd = {
+  #   enable = true;
+  #   enableUserService = true;
+  # };
+
+  # services.udev.packages = [
+  #   (pkgs.writeTextFile {
+  #     name = "49-stlinkv2.rules";
+  #     destination = "/etc/udev/rules.d/49-stlinkv2.rules";
+  #     text = ''
+  #       SUBSYSTEMS=="usb", ATTRS{idVendor}=="0483", ATTRS{idProduct}=="374b", GROUP="users", MODE="0666"
+  #     '';
+  #   })
+  # ];
 }

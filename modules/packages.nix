@@ -15,6 +15,8 @@ in
     dracula-icon-theme # icons for gtk
     where-is-my-sddm-theme # minimalist sddm theme
     bibata-cursors # cursor theme for gtk
+    cmatrix     # matrix screensaver
+    asciiquarium# virtual fish tank screen saver
 
     # CLI
     kitty       # terminal emulator
@@ -56,6 +58,8 @@ in
     flameshot   # all-in-one screenshot tool
     xwaylandvideobridge # allows screencapture for X.org apps
     openrazer-daemon # allows to use razer devices
+    brightnessctl # used to control screen backlight
+    xclip       # something something xorg clipboard
 
     # CLI-Utils
     fd          # file search
@@ -77,7 +81,7 @@ in
     python3     # Python compiler/interpreter
     gnumake     # Makefile support
     valgrind    # Memory management analysis tool
-    #cursorsh    # AI IDE
+    cursorsh    # AI IDE
     stm32cubemx # STM32 Microcontroller IDE
     rustc       # Rust compiler
     cargo       # Rust dependencies manager
