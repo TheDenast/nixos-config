@@ -75,7 +75,7 @@
         "warning": 15,
         "critical": 5
     },
-    "tooltip": false
+    "tooltip": true
   },
   "pulseaudio/slider": {
       "min": 0,

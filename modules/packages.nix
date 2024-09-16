@@ -4,6 +4,10 @@ let
   cursorsh = pkgs.callPackage ./cursorsh.nix {};
 in
 {
+  nixpkgs.config.permittedInsecurePackages = [
+    "segger-jlink-qt4-796s"
+  ];
+
   environment.systemPackages = with pkgs; [
     # Eye Candy
     neofetch    # >:P
@@ -82,9 +86,16 @@ in
     gnumake     # Makefile support
     valgrind    # Memory management analysis tool
     cursorsh    # AI IDE
-    stm32cubemx # STM32 Microcontroller IDE
     rustc       # Rust compiler
     cargo       # Rust dependencies manager
+
+    # Dev Stuff
+    pgadmin4-desktopmode # Administration and development platform for PostgreSQL
+    stm32cubemx # STM32 Microcontroller IDE
+    nrf-command-line-tools # Nordic Semiconductor nRF Command Line Tools
+    nrfutil     # Device Firmware Update tool for nRF chips
+    nrf5-sdk    # Nordic Semiconductor nRF5 Software Development Kit
+    nrfconnect  # Nordic Semiconductor nRF Connect for Desktop
 
     # Productivity
     obsidian    # notes / knowledge base
@@ -117,10 +128,9 @@ in
     nsxiv       # minimalist image viewer
     obs-studio  # screen recording tool
     mullvad-browser # hardened firefox fork from mullvad
-    pgadmin4-desktopmode # Administration and development platform for PostgreSQL
     gimp        # image editor
-
   ];
+
 
   # Font definitions
   fonts.packages = with pkgs; [
