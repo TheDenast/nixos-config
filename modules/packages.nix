@@ -4,10 +4,6 @@ let
   cursorsh = pkgs.callPackage ./cursorsh.nix {};
 in
 {
-  nixpkgs.config.permittedInsecurePackages = [
-    "segger-jlink-qt4-796s"
-  ];
-
   environment.systemPackages = with pkgs; [
     # Eye Candy
     neofetch    # >:P
@@ -114,6 +110,7 @@ in
     # discord     # when webcord misbehaves
     vesktop     # containerized discord w/ fixed screen share
     slack       # messaging app I use @ work
+    element-desktop # matrix client
 
     # Office
     libreoffice-qt6-still # office suit
