@@ -73,13 +73,15 @@
   #   enableUserService = true;
   # };
 
-  # services.udev.packages = [
-  #   (pkgs.writeTextFile {
-  #     name = "49-stlinkv2.rules";
-  #     destination = "/etc/udev/rules.d/49-stlinkv2.rules";
-  #     text = ''
-  #       SUBSYSTEMS=="usb", ATTRS{idVendor}=="0483", ATTRS{idProduct}=="374b", GROUP="users", MODE="0666"
-  #     '';
-  #   })
-  # ];
+  services.udev.packages = [
+    # (pkgs.writeTextFile {
+    #   name = "49-stlinkv2.rules";
+    #   destination = "/etc/udev/rules.d/49-stlinkv2.rules";
+    #   text = ''
+    #     SUBSYSTEMS=="usb", ATTRS{idVendor}=="0483", ATTRS{idProduct}=="374b", GROUP="users", MODE="0666"
+    #   '';
+    # })
+    pkgs.nrf-udev
+    pkgs.segger-jlink
+  ];
 }

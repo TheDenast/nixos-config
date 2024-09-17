@@ -15,6 +15,8 @@
       pkgs = import nixpkgs {
         inherit system;
         config.allowUnfree = true;
+        config.permittedInsecurePackages = ["segger-jlink-qt4-796s"];
+        config.segger-jlink.acceptLicense = true;
       };
     in {
       nixosConfigurations = {
