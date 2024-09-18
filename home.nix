@@ -32,7 +32,6 @@
     ".config/fusuma".source = config.lib.file.mkOutOfStoreSymlink "/home/denast/.nixos-config/dotfiles/fusuma";
     ".config/hypr".source = config.lib.file.mkOutOfStoreSymlink "/home/denast/.nixos-config/dotfiles/hypr";
     ".config/kitty".source = config.lib.file.mkOutOfStoreSymlink "/home/denast/.nixos-config/dotfiles/kitty";
-    ".config/lazygit".source = config.lib.file.mkOutOfStoreSymlink "/home/denast/.nixos-config/dotfiles/lazygit";
     ".config/mimeapps.list".source = config.lib.file.mkOutOfStoreSymlink "/home/denast/.nixos-config/dotfiles/mimeapps.list";
     ".config/neofetch".source = config.lib.file.mkOutOfStoreSymlink "/home/denast/.nixos-config/dotfiles/neofetch";
     ".config/nvim".source = config.lib.file.mkOutOfStoreSymlink "/home/denast/.nixos-config/dotfiles/nvim";
