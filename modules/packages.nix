@@ -84,6 +84,9 @@ in
     cursorsh    # AI IDE
     rustc       # Rust compiler
     cargo       # Rust dependencies manager
+    basedpyright # python type checker
+    ruff        # python linter
+    black       # uncompromising python formatter 
 
     # Dev Stuff
     pgadmin4-desktopmode # Administration and development platform for PostgreSQL
@@ -103,6 +106,7 @@ in
     winetricks  # used for more advanced wine settings
     xivlauncher # ffxiv oss launcher
     wowup-cf    # WoW addon manager
+    moonlight-qt# remote game streaming
 
     # Social
     telegram-desktop # messaging
