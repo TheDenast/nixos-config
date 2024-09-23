@@ -14,6 +14,17 @@ return {
             "--fallback-style=llvm",
           },
         },
+        pylsp = {
+          settings = {
+            pylsp = {
+              plugins = {
+                pycodestyle = {
+                  maxLineLength = 88,  -- Set line length to 88 for Black compatibility
+                },
+              },
+            },
+          },
+        },
       },
     },
   },
