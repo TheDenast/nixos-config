@@ -130,6 +130,7 @@ in
     obs-studio  # screen recording tool
     mullvad-browser # hardened firefox fork from mullvad
     gimp        # image editor
+    imagemagick # cli image-related stuff
   ];
 
 
