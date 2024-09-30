@@ -17,4 +17,6 @@
   services.tailscale = {
     enable = true;
   };
+
+  programs.openvpn3.enable = true;
 }

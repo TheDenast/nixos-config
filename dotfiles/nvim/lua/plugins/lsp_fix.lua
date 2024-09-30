@@ -25,6 +25,11 @@ return {
             },
           },
         },
+        lua_ls = {
+          cmd = {
+            "/run/current-system/sw/bin/lua-language-server"
+          }
+        },
       },
     },
   },
