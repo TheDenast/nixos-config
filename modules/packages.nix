@@ -70,6 +70,7 @@ in
     unzip       # handy to quickly unpack zips
     sshfs       # mount filesystems over ssh
     nodejs_22   # javasript stuff
+    rsync       # file copying util (and more!)
 
     # Codin'
     vim         # grandpa
@@ -87,6 +88,10 @@ in
     basedpyright # python type checker
     ruff        # python linter
     black       # uncompromising python formatter 
+    bear        # tool that generates a compilation database for clang tooling
+    go          # google something something language
+    lua         # Lua language
+    lua-language-server # lsp for lua
 
     # Dev Stuff
     pgadmin4-desktopmode # Administration and development platform for PostgreSQL
@@ -107,6 +112,7 @@ in
     xivlauncher # ffxiv oss launcher
     wowup-cf    # WoW addon manager
     moonlight-qt# remote game streaming
+    prismlauncher # minecraft
 
     # Social
     telegram-desktop # messaging
@@ -131,6 +137,8 @@ in
     mullvad-browser # hardened firefox fork from mullvad
     gimp        # image editor
     imagemagick # cli image-related stuff
+    # openvpn     # vpn needed for work
+    # openvpn3
   ];
 
 
