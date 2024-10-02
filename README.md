@@ -1,41 +1,72 @@
 # Denast NixOS Configuration
 > **A configuration for NixOS that I personally daily drive**
 
+## Features
+
+- Flakes + Home Manager
+- Multiple configurations in a single config (see below)
+- Dotfiles are [packaged](./dotfiles/) with the configurations and 
+automatically symlinked using [home manager](./home.nix)
+
 ## Deployment Instructions
 
-### Step-by-Step Guide
+### Initial Setup
 
-1. **Clone the Repository on the New Machine:**
+1. Clone the Repository on the New Machine:
    ```sh
    git clone https://github.com/TheDenast/nixos-config.git /home/denast/.nixos-config
    ```
 
-2. **Create a Symlink to `/etc/nixos`:**
+2. Select configuration to build. Currently available:
+
+   - `asus-ga401iu`
+   - `framework-13`
+
+3. Rebuild the System with the New Configuration:
    ```sh
-   sudo ln -s /home/denast/.nixos-config /etc/nixos
+   sudo nixos-rebuild switch --flake /home/denast/.nixos-config#{configuration}
    ```
+   Where `{configuration}` is your configuration of choice
 
-3. **Rebuild the System with the New Configuration:**
-   ```sh
-   sudo nixos-rebuild switch --flake /home/denast/.nixos-config#default
-   ```
+### System Updates
 
-### Regular Updates
+Since the configuration uses flakes to overwrite pinned nixpkgs version,
+in order to complete the system update you have to update the flake.lock first
 
-1. **Make Changes to the Configuration:**
+1. Update flake.lock 
    ```sh
    cd /home/denast/.nixos-config
-   nano configuration.nix  # or any other editor
+   nix flake update
    ```
 
-2. **Commit and Push the Changes:**
+2. Rebuild the system with new flake.lock
+   ```sh
+   sudo nixos-rebuild switch --flake /home/denast/.nixos-config#{configuration}
+   ```
+
+3. If the update went well, commit and push the changes
    ```sh
    git add .
-   git commit -m "Updated configuration"
+   git commit -m "Flake update"
    git push
    ```
 
-3. **Rebuild the System to Apply the Changes:**
+### Configuration Updates
+
+1. Make changes to the configuration:
    ```sh
-   sudo nixos-rebuild switch --flake /home/denast/.nixos-config#default
+   cd /home/denast/.nixos-config
+   nvim configuration.nix  # or any other editor
+   ```
+
+2. Rebuild the system to test the changes:
+   ```sh
+   sudo nixos-rebuild switch --flake /home/denast/.nixos-config#{configuration}
+   ```
+
+3. If all went well, commit and push the changes:
+   ```sh
+   git add .
+   git commit -m "specify what you changed here"
+   git push
    ```
