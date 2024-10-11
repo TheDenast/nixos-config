@@ -84,6 +84,7 @@ in
     valgrind    # Memory management analysis tool
     cursorsh    # AI IDE
     rustc       # Rust compiler
+    rustup      # Rust toolchain installer
     cargo       # Rust dependencies manager
     basedpyright # python type checker
     ruff        # python linter
@@ -139,6 +140,14 @@ in
     imagemagick # cli image-related stuff
     # openvpn     # vpn needed for work
     # openvpn3
+    #
+
+    # security 
+    yubikey-manager-qt
+    yubikey-personalization-gui
+    opensc
+    gnupg
+    pinentry
   ];
 
 
