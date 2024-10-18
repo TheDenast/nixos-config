@@ -59,29 +59,18 @@
   };
 
   # Fingerprint reader stuff
-  systemd.services.fprintd = {
-    wantedBy = [ "multi-user.target" ];
-    serviceConfig.Type = "simple";
-  };
+  # systemd.services.fprintd = {
+  #   wantedBy = [ "multi-user.target" ];
+  #   serviceConfig.Type = "simple";
+  # };
 
   # Install the driver
   services.fprintd.enable = true;
 
-  # services.supergfxd.enable = true;
+  security.pam.services.sudo.fprintAuth = true;
 
-  # services.asusd = {
-  #   enable = true;
-  #   enableUserService = true;
-  # };
 
   services.udev.packages = [
-    # (pkgs.writeTextFile {
-    #   name = "49-stlinkv2.rules";
-    #   destination = "/etc/udev/rules.d/49-stlinkv2.rules";
-    #   text = ''
-    #     SUBSYSTEMS=="usb", ATTRS{idVendor}=="0483", ATTRS{idProduct}=="374b", GROUP="users", MODE="0666"
-    #   '';
-    # })
     pkgs.nrf-udev
     pkgs.segger-jlink
     pkgs.yubikey-personalization 

@@ -89,18 +89,18 @@ in
     basedpyright # python type checker
     ruff        # python linter
     black       # uncompromising python formatter 
-    bear        # tool that generates a compilation database for clang tooling
+    # bear        # tool that generates a compilation database for clang tooling
     go          # google something something language
     lua         # Lua language
     lua-language-server # lsp for lua
 
     # Dev Stuff
-    pgadmin4-desktopmode # Administration and development platform for PostgreSQL
-    stm32cubemx # STM32 Microcontroller IDE
-    nrf-command-line-tools # Nordic Semiconductor nRF Command Line Tools
-    nrfutil     # Device Firmware Update tool for nRF chips
-    nrf5-sdk    # Nordic Semiconductor nRF5 Software Development Kit
-    nrfconnect  # Nordic Semiconductor nRF Connect for Desktop
+    # pgadmin4-desktopmode # Administration and development platform for PostgreSQL
+    # stm32cubemx # STM32 Microcontroller IDE
+    # nrf-command-line-tools # Nordic Semiconductor nRF Command Line Tools
+    # nrfutil     # Device Firmware Update tool for nRF chips
+    # nrf5-sdk    # Nordic Semiconductor nRF5 Software Development Kit
+    # nrfconnect  # Nordic Semiconductor nRF Connect for Desktop
 
     # Productivity
     obsidian    # notes / knowledge base
@@ -128,23 +128,20 @@ in
 
     # Misc
     chromium    # for when firefox doesn't render something right
+    librewolf   # privacy-focused firefox fork
     qemu        # virtualization tool
     virt-manager # qemu gui frontend
     virtiofsd   # virtual filesystems to share dirs with guest virt machines
-    polychromatic # razer RGB configuration
     mpv         # minimalist video player
     nsxiv       # minimalist image viewer
     obs-studio  # screen recording tool
     mullvad-browser # hardened firefox fork from mullvad
     gimp        # image editor
     imagemagick # cli image-related stuff
-    # openvpn     # vpn needed for work
-    # openvpn3
-    #
 
     # security 
-    yubikey-manager-qt
     yubikey-personalization-gui
+    yubioath-flutter
     opensc
     gnupg
     pinentry

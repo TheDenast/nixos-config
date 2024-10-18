@@ -18,5 +18,5 @@
     enable = true;
   };
 
-  programs.openvpn3.enable = true;
+  # programs.openvpn3.enable = true;
 }
