@@ -14,7 +14,7 @@
     dedicatedServer.openFirewall = true;
   };
 
-  programs.firefox.enable = true;  
+  # programs.firefox.enable = true;  
 
   # Gamemode (should enchance gaming :O)
   programs.gamemode.enable = true;
