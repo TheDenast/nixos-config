@@ -96,6 +96,7 @@ in
 
     # Dev Stuff
     # pgadmin4-desktopmode # Administration and development platform for PostgreSQL
+    postman     # API development
     # stm32cubemx # STM32 Microcontroller IDE
     # nrf-command-line-tools # Nordic Semiconductor nRF Command Line Tools
     # nrfutil     # Device Firmware Update tool for nRF chips
