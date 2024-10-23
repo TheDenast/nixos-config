@@ -75,6 +75,7 @@
   xdg.mimeApps = {
     enable = true;
     defaultApplications = {
+      "inode/directory" = ["thunar.desktop"];
       "image/png" = ["nsxiv.desktop"];
       "image/jpeg" = ["nsxiv.desktop"];
       "image/gif" = ["nsxiv.desktop"];
