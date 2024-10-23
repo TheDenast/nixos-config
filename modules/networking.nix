@@ -9,13 +9,14 @@
     allowedUDPPorts = [53317];
   };
 
-  services.mullvad-vpn = {
-    enable = true;
-    package = pkgs.mullvad-vpn;
-  };
+  # services.mullvad-vpn = {
+  #   enable = true;
+  #   package = pkgs.mullvad-vpn;
+  # };
 
   services.tailscale = {
     enable = true;
+    useRoutingFeatures = "client";
   };
 
   # programs.openvpn3.enable = true;
