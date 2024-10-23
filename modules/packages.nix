@@ -26,7 +26,6 @@ in
     lshw        # ls hardware
     btop        # resource monitor
     powertop    # laptop power monitor
-    #nvtopPackages.full # GPU monitor
     tmux        # terminal window mux
     ncdu        # nifty util to see disk space usage
     tree        # lists dir contents as a tree
@@ -89,13 +88,13 @@ in
     basedpyright # python type checker
     ruff        # python linter
     black       # uncompromising python formatter 
-    # bear        # tool that generates a compilation database for clang tooling
+    bear        # tool that generates a compilation database for clang tooling
     go          # google something something language
     lua         # Lua language
     lua-language-server # lsp for lua
 
     # Dev Stuff
-    # pgadmin4-desktopmode # Administration and development platform for PostgreSQL
+    pgadmin4-desktopmode # Administration and development platform for PostgreSQL
     postman     # API development
     # stm32cubemx # STM32 Microcontroller IDE
     # nrf-command-line-tools # Nordic Semiconductor nRF Command Line Tools
@@ -118,8 +117,6 @@ in
 
     # Social
     telegram-desktop # messaging
-    # webcord     # containerized discord web version
-    # discord     # when webcord misbehaves
     vesktop     # containerized discord w/ fixed screen share
     slack       # messaging app I use @ work
     element-desktop # matrix client
