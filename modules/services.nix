@@ -26,8 +26,6 @@
     xkb.variant = "";
   };
 
-  services.blueman.enable = true;
-
   services.printing.enable = true;
 
   services.pipewire = {

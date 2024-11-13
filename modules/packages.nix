@@ -72,6 +72,7 @@ in
     rsync       # file copying util (and more!)
 
     # Codin'
+    direnv      # nixos tool for dev environments
     vim         # grandpa
     neovim      # THE editor
     git         # versioning software

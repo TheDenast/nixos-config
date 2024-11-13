@@ -11,3 +11,4 @@ alias cnvim='function _cnvim; z $argv; nvim .; end; _cnvim'
 setenv EDITOR nvim
 source /home/denast/.secrets/api-keys.fish
 fish_add_path $HOME/.cargo/bin
+direnv hook fish | source
