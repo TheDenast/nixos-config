@@ -59,6 +59,7 @@ in
     openrazer-daemon # allows to use razer devices
     brightnessctl # used to control screen backlight
     xclip       # something something xorg clipboard
+    hyprshot    # hyprland screenshot tool
 
     # CLI-Utils
     fd          # file search
