@@ -20,6 +20,8 @@ apply_monitor_config() {
     echo "at work"
     hyprctl keyword monitor "DP-3,1920x1080@60,0x0,1"
     hyprctl keyword monitor "eDP-1,2880x1920@120,0x1080,2"
+    # hyprctl keyword monitor "eDP-1,2880x1920@120,0x0,2"
+    # hyprctl keyword monitor "DP-3,1920x1080@60,2880x0,1,transform,1"
   # Laptop-only setup
   else
     echo "standalone"

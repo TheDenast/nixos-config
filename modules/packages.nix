@@ -75,6 +75,7 @@ in
     direnv      # nixos tool for dev environments
     vim         # grandpa
     neovim      # THE editor
+    code-cursor # AI IDE built on VS-Code
     git         # versioning software
     lazygit     # git TUI wrapper
     gcc         # C compiler
@@ -82,7 +83,6 @@ in
     python3     # Python compiler/interpreter
     gnumake     # Makefile support
     valgrind    # Memory management analysis tool
-    cursorsh    # AI IDE
     rustc       # Rust compiler
     rustup      # Rust toolchain installer
     cargo       # Rust dependencies manager
