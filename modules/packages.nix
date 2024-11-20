@@ -35,6 +35,7 @@ in
     eza         # modern `ls` alternative
     bat         # modern `cat` alternative
     yazi        # modern cli file manager
+    mgitstatus  # quickly see status of git repos
 
     # OS-Utils
     waybar      # bar for hyprland
