@@ -8,6 +8,7 @@ get_monitor_name() {
 hp_monitor=$(get_monitor_name "HP")
 dell_monitor=$(get_monitor_name "DELL")
 laptop_monitor=$(get_monitor_name "BOE")
+home_monitor=$(get_monitor_name "LG")
 
 # Check if we're at work (both monitors present)
 if [[ -n "$hp_monitor" && -n "$dell_monitor" ]]; then
@@ -15,6 +16,10 @@ if [[ -n "$hp_monitor" && -n "$dell_monitor" ]]; then
   hyprctl keyword monitor "${dell_monitor},1920x1080@60,0x0,1"
   hyprctl keyword monitor "${hp_monitor},1600x900@60,1920x0,1,transform,3"
   hyprctl keyword monitor "${laptop_monitor},2880x1920@120,0x1080,2"
+elif [[ -n "$home_monitor" ]]; then
+  echo "at home"
+  hyprctl keyword monitor "${home_monitor},2560x1440@144,0x0,1"
+  hyprctl keyword monitor "${laptop_monitor},disabled"
 else
   echo "standalone"
   hyprctl keyword monitor "${laptop_monitor},2880x1920@120,0x0,2"

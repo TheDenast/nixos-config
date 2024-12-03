@@ -151,7 +151,8 @@ in
 
   # Font definitions
   fonts.packages = with pkgs; [
-    (nerdfonts.override { fonts = [ "Hermit" "JetBrainsMono"]; })
+    nerd-fonts.hurmit
+    nerd-fonts.jetbrains-mono
     font-awesome
     monocraft
   ];
