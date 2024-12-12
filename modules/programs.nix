@@ -1,9 +1,20 @@
 { ... }:
 
 {
+  programs.uwsm = {
+    enable = true;
+    waylandCompositors = {
+      hyprland = {
+      prettyName = "Hyprland";
+      comment = "Hyprland compositor managed by UWSM";
+      binPath = "/run/current-system/sw/bin/Hyprland";
+      };
+    };
+  };
+
   programs.hyprland = {
-     # Install the packages from nixpkgs
      enable = true;
+     withUWSM = true; # universal wayland session manager
      # Whether to enable XWayland
      xwayland.enable = true;
   };
