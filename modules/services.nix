@@ -2,14 +2,17 @@
 
 {
   services.xserver.enable = true;
+
   services.xserver.desktopManager.plasma5.enable = false;
 
-  services.displayManager.sddm.package = pkgs.kdePackages.sddm;
-  services.displayManager.sddm = {
-    enable = true;
-    extraPackages = with pkgs; [qt6.qt5compat];
-    theme = "where_is_my_sddm_theme";
- };
+  services.xserver.displayManager.startx.enable = true;
+
+ #  services.displayManager.sddm.package = pkgs.kdePackages.sddm;
+ #  services.displayManager.sddm = {
+ #    enable = true;
+ #    extraPackages = with pkgs; [qt6.qt5compat];
+ #    theme = "where_is_my_sddm_theme";
+ # };
 
   # Needed for secret saving on hyprland
   services.gnome.gnome-keyring.enable = true;
