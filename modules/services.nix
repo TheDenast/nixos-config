@@ -72,8 +72,8 @@
 
 
   services.udev.packages = [
-    pkgs.nrf-udev
-    pkgs.segger-jlink
+    # pkgs.nrf-udev
+    # pkgs.segger-jlink
     pkgs.yubikey-personalization 
   ];
 
