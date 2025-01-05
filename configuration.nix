@@ -33,7 +33,7 @@
   virtualisation.libvirtd.enable = true;
 
   # android virtualisation
-  virtualisation.waydroid.enable = true;
+  # virtualisation.waydroid.enable = true;
 
   nixpkgs.config.allowUnfree = true;
   system.stateVersion = "unstable";
