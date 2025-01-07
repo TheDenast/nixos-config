@@ -12,18 +12,18 @@
   outputs = { self, nixpkgs, home-manager, ... }@inputs:
     let
       system = "x86_64-linux";
-      pkgs = import nixpkgs {
-        inherit system;
-        config.allowUnfree = true;
-        config.permittedInsecurePackages = ["segger-jlink-qt4-796s"];
-        config.segger-jlink.acceptLicense = true;
+      nixpkgsConfig = {
+        allowUnfree = true;
+        permittedInsecurePackages = ["segger-jlink-qt4-796s"];
+        segger-jlink.acceptLicense = true;
       };
     in {
       nixosConfigurations = {
         asus-ga401iu = nixpkgs.lib.nixosSystem {
           inherit system;
-          specialArgs = { inherit inputs pkgs; };
+          specialArgs = { inherit inputs; };
           modules = [
+            { nixpkgs.config = nixpkgsConfig; }
             ./configuration.nix
             ./hosts/asus-ga401iu
             home-manager.nixosModules.home-manager
@@ -40,8 +40,9 @@
 
         framework-13 = nixpkgs.lib.nixosSystem {
           inherit system;
-          specialArgs = { inherit inputs pkgs; };
+          specialArgs = { inherit inputs; };
           modules = [
+            { nixpkgs.config = nixpkgsConfig; }
             ./configuration.nix
             ./hosts/framework-13
             home-manager.nixosModules.home-manager
