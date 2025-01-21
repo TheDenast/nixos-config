@@ -30,6 +30,12 @@
   };
 
   services.printing.enable = true;
+  # services.printing.drivers = [ pkgs.cnijfilter2 pkgs.canon-cups-ufr2 ];
+  # services.avahi = {
+  #   enable = true;
+  #   nssmdns4 = true;
+  #   openFirewall = true;
+  # };
 
   services.pipewire = {
     enable = true;
