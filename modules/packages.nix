@@ -88,7 +88,7 @@ in
     rustc       # Rust compiler
     rustup      # Rust toolchain installer
     cargo       # Rust dependencies manager
-    basedpyright # python type checker
+    # basedpyright # python type checker
     ruff        # python linter
     black       # uncompromising python formatter 
     bear        # tool that generates a compilation database for clang tooling
@@ -136,7 +136,7 @@ in
     mpv         # minimalist video player
     nsxiv       # minimalist image viewer
     obs-studio  # screen recording tool
-    mullvad-browser # hardened firefox fork from mullvad
+    # mullvad-browser # hardened firefox fork from mullvad
     gimp        # image editor
     imagemagick # cli image-related stuff
 
