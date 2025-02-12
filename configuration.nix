@@ -36,5 +36,5 @@
   # virtualisation.waydroid.enable = true;
 
   nixpkgs.config.allowUnfree = true;
-  system.stateVersion = "unstable";
+  # system.stateVersion = "unstable";
 }
