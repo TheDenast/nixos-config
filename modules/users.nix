@@ -6,7 +6,7 @@
     description = "denast";
     extraGroups = [ "networkmanager" "wheel" "openrazer" "input" ];
     packages = with pkgs; [
-      kate
+      kdePackages.kate
     ];
   };
 

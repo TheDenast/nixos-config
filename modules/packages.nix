@@ -56,7 +56,7 @@ in
     slurp       # select part of wayland workspace
     swappy      # screenshot tool
     flameshot   # all-in-one screenshot tool
-    xwaylandvideobridge # allows screencapture for X.org apps
+    kdePackages.xwaylandvideobridge # allows screencapture for X.org apps
     openrazer-daemon # allows to use razer devices
     brightnessctl # used to control screen backlight
     xclip       # something something xorg clipboard
