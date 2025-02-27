@@ -95,6 +95,7 @@ in
     go          # google something something language
     lua         # Lua language
     lua-language-server # lsp for lua
+    claude-code # Claude LLM terminal integration
 
     # Dev Stuff
     pgadmin4-desktopmode # Administration and development platform for PostgreSQL
