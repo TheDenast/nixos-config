@@ -42,7 +42,7 @@ in
     swww        # wallpapers
     dunst       # notifications
     xfce.thunar # file manager
-    wofi        # app runner
+    walker      # app runner
     fusuma      # touchpad gestures
     networkmanagerapplet # network applet
     wl-clipboard # copy/paste utility for wayland
@@ -95,7 +95,6 @@ in
     go          # google something something language
     lua         # Lua language
     lua-language-server # lsp for lua
-    claude-code # Claude LLM terminal integration
 
     # Dev Stuff
     pgadmin4-desktopmode # Administration and development platform for PostgreSQL
