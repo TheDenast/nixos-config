@@ -8,7 +8,7 @@ alias cd="z"
 alias zz="yazi"
 alias ll="eza -lh --group-directories-first --icons --no-permissions --no-user"
 alias cnvim='function _cnvim; z $argv; nvim .; end; _cnvim'
-alias mgs='mgitstatus -d 3 --no-upstream -c /home/denast/.nixos-config/ /home/denast/Pictures/ /home/denast/Projects/ | sed \'s/\/home\/denast\///\''
+alias mgs='mgitstatus -d 3 --no-upstream -c /home/denast/.nixos-config/ /home/denast/.dots/ | sed \'s/\/home\/denast\///\'; mgitstatus -d 3 --no-upstream -c /home/denast/Pictures/ | sed \'s/\/home\/denast\/Pictures\///\'; mgitstatus -d 3 --no-upstream -c /home/denast/Projects/ | sed \'s/\/home\/denast\/Projects\///\''
 setenv EDITOR nvim
 source /home/denast/.secrets/api-keys.fish
 fish_add_path $HOME/.cargo/bin
