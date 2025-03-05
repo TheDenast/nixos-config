@@ -26,21 +26,20 @@
   programs.home-manager.enable = true;
 
   home.file = {
-    ".config/btop".source = config.lib.file.mkOutOfStoreSymlink "/home/denast/.nixos-config/dotfiles/btop";
-    ".config/dunst".source = config.lib.file.mkOutOfStoreSymlink "/home/denast/.nixos-config/dotfiles/dunst";
-    ".config/fish".source = config.lib.file.mkOutOfStoreSymlink "/home/denast/.nixos-config/dotfiles/fish";
-    ".config/fusuma".source = config.lib.file.mkOutOfStoreSymlink "/home/denast/.nixos-config/dotfiles/fusuma";
-    ".config/hypr".source = config.lib.file.mkOutOfStoreSymlink "/home/denast/.nixos-config/dotfiles/hypr";
-    ".config/kitty".source = config.lib.file.mkOutOfStoreSymlink "/home/denast/.nixos-config/dotfiles/kitty";
-    # ".config/mimeapps.list".source = config.lib.file.mkOutOfStoreSymlink "/home/denast/.nixos-config/dotfiles/mimeapps.list";
-    ".config/neofetch".source = config.lib.file.mkOutOfStoreSymlink "/home/denast/.nixos-config/dotfiles/neofetch";
-    ".config/nvim".source = config.lib.file.mkOutOfStoreSymlink "/home/denast/.nixos-config/dotfiles/nvim";
-    ".config/ranger".source = config.lib.file.mkOutOfStoreSymlink "/home/denast/.nixos-config/dotfiles/ranger";
-    ".config/rofi".source = config.lib.file.mkOutOfStoreSymlink "/home/denast/.nixos-config/dotfiles/rofi";
-    ".config/starship.toml".source = config.lib.file.mkOutOfStoreSymlink "/home/denast/.nixos-config/dotfiles/starship.toml";
-    ".config/swappy".source = config.lib.file.mkOutOfStoreSymlink "/home/denast/.nixos-config/dotfiles/swappy";
-    ".config/waybar".source = config.lib.file.mkOutOfStoreSymlink "/home/denast/.nixos-config/dotfiles/waybar";
-    ".config/wofi".source = config.lib.file.mkOutOfStoreSymlink "/home/denast/.nixos-config/dotfiles/wofi";
+    ".config/btop".source = config.lib.file.mkOutOfStoreSymlink "/home/denast/.dots/btop";
+    ".config/dunst".source = config.lib.file.mkOutOfStoreSymlink "/home/denast/.dots/dunst";
+    ".config/fish".source = config.lib.file.mkOutOfStoreSymlink "/home/denast/.dots/fish";
+    ".config/fusuma".source = config.lib.file.mkOutOfStoreSymlink "/home/denast/.dots/fusuma";
+    ".config/hypr".source = config.lib.file.mkOutOfStoreSymlink "/home/denast/.dots/hypr";
+    ".config/kitty".source = config.lib.file.mkOutOfStoreSymlink "/home/denast/.dots/kitty";
+    ".config/neofetch".source = config.lib.file.mkOutOfStoreSymlink "/home/denast/.dots/neofetch";
+    ".config/nvim".source = config.lib.file.mkOutOfStoreSymlink "/home/denast/.dots/nvim";
+    ".config/ranger".source = config.lib.file.mkOutOfStoreSymlink "/home/denast/.dots/ranger";
+    ".config/rofi".source = config.lib.file.mkOutOfStoreSymlink "/home/denast/.dots/rofi";
+    ".config/starship.toml".source = config.lib.file.mkOutOfStoreSymlink "/home/denast/.dots/starship.toml";
+    ".config/swappy".source = config.lib.file.mkOutOfStoreSymlink "/home/denast/.dots/swappy";
+    ".config/waybar".source = config.lib.file.mkOutOfStoreSymlink "/home/denast/.dots/waybar";
+    ".config/wofi".source = config.lib.file.mkOutOfStoreSymlink "/home/denast/.dots/wofi";
   };
 
   home.pointerCursor = {
