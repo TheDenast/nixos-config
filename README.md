@@ -5,8 +5,6 @@
 
 - Flakes + Home Manager
 - Multiple configurations in a single config (see below)
-- Dotfiles are [packaged](./dotfiles/) with the configurations and 
-automatically symlinked using [home manager](./home.nix)
 
 ## Deployment Instructions
 
