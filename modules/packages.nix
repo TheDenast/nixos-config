@@ -17,6 +17,7 @@ in
     bibata-cursors # cursor theme for gtk
     cmatrix     # matrix screensaver
     asciiquarium# virtual fish tank screen saver
+    sl          # most important linux cli tool to date
 
     # CLI
     kitty       # terminal emulator
