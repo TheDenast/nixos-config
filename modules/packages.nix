@@ -21,7 +21,9 @@ in
 
     # CLI
     kitty       # terminal emulator
-    fish        # shell
+    fish        # friendly shell
+    nushell     # shell w/ data piping
+    xonsh       # shell w/ embedded python
     starship    # shell prompt
     ranger      # files manager
     lshw        # ls hardware
@@ -62,6 +64,7 @@ in
     brightnessctl # used to control screen backlight
     xclip       # something something xorg clipboard
     hyprshot    # hyprland screenshot tool
+    nwg-displays # gui tool for quick monitor setup
 
     # CLI-Utils
     fd          # file search
