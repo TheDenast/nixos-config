@@ -29,6 +29,8 @@
     ".config/btop".source = config.lib.file.mkOutOfStoreSymlink "/home/denast/.dots/btop";
     ".config/dunst".source = config.lib.file.mkOutOfStoreSymlink "/home/denast/.dots/dunst";
     ".config/fish".source = config.lib.file.mkOutOfStoreSymlink "/home/denast/.dots/fish";
+    ".config/xonsh".source = config.lib.file.mkOutOfStoreSymlink "/home/denast/.dots/xonsh";
+    ".config/nushell".source = config.lib.file.mkOutOfStoreSymlink "/home/denast/.dots/nushell";
     ".config/fusuma".source = config.lib.file.mkOutOfStoreSymlink "/home/denast/.dots/fusuma";
     ".config/hypr".source = config.lib.file.mkOutOfStoreSymlink "/home/denast/.dots/hypr";
     ".config/kitty".source = config.lib.file.mkOutOfStoreSymlink "/home/denast/.dots/kitty";
