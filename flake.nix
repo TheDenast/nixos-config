@@ -14,7 +14,7 @@
       system = "x86_64-linux";
       nixpkgsConfig = {
         allowUnfree = true;
-        permittedInsecurePackages = ["segger-jlink-qt4-796s"];
+        permittedInsecurePackages = ["segger-jlink-qt4-810"];
         segger-jlink.acceptLicense = true;
       };
     in {

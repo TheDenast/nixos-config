@@ -107,7 +107,7 @@ in
     # nrf-command-line-tools # Nordic Semiconductor nRF Command Line Tools
     # nrfutil     # Device Firmware Update tool for nRF chips
     # nrf5-sdk    # Nordic Semiconductor nRF5 Software Development Kit
-    # nrfconnect  # Nordic Semiconductor nRF Connect for Desktop
+    nrfconnect  # Nordic Semiconductor nRF Connect for Desktop
 
     # Productivity
     obsidian    # notes / knowledge base
