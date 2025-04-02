@@ -5,8 +5,12 @@
 
   networking.firewall = {
     enable = true;
-    allowedTCPPorts = [80 443 53317];
-    allowedUDPPorts = [53317];
+    allowedTCPPorts = [
+      80
+      443
+      53317
+    ];
+    allowedUDPPorts = [ 53317 ];
   };
 
   # services.mullvad-vpn = {

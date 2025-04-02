@@ -7,19 +7,19 @@
 
   services.xserver.displayManager.startx.enable = true;
 
- #  services.displayManager.sddm.package = pkgs.kdePackages.sddm;
- #  services.displayManager.sddm = {
- #    enable = true;
- #    extraPackages = with pkgs; [qt6.qt5compat];
- #    theme = "where_is_my_sddm_theme";
- # };
+  #  services.displayManager.sddm.package = pkgs.kdePackages.sddm;
+  #  services.displayManager.sddm = {
+  #    enable = true;
+  #    extraPackages = with pkgs; [qt6.qt5compat];
+  #    theme = "where_is_my_sddm_theme";
+  # };
 
   # Needed for secret saving on hyprland
   services.gnome.gnome-keyring.enable = true;
 
   # Load nvidia driver for Xorg and Wayland
   services.xserver.videoDrivers = [
-#    "nvidia"
+    #    "nvidia"
     "amdgpu"
   ];
 
@@ -76,11 +76,10 @@
 
   security.pam.services.sudo.fprintAuth = true;
 
-
   services.udev.packages = [
     pkgs.nrf-udev
     pkgs.segger-jlink
-    pkgs.yubikey-personalization 
+    pkgs.yubikey-personalization
   ];
 
   services.pcscd.enable = true;
