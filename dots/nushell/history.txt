@@ -1,2 +1,0 @@
-$nu.config-path
-neofetch
