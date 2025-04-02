@@ -9,15 +9,22 @@
     };
   };
 
-  outputs = { self, nixpkgs, home-manager, ... }@inputs:
+  outputs =
+    {
+      self,
+      nixpkgs,
+      home-manager,
+      ...
+    }@inputs:
     let
       system = "x86_64-linux";
       nixpkgsConfig = {
         allowUnfree = true;
-        permittedInsecurePackages = ["segger-jlink-qt4-810"];
+        permittedInsecurePackages = [ "segger-jlink-qt4-810" ];
         segger-jlink.acceptLicense = true;
       };
-    in {
+    in
+    {
       nixosConfigurations = {
         asus-ga401iu = nixpkgs.lib.nixosSystem {
           inherit system;

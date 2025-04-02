@@ -8,9 +8,9 @@
 
   programs.git = {
     enable = true;
-    userName  = "denast";
+    userName = "denast";
     userEmail = "denast@proton.me";
-  };  
+  };
 
   # This value determines the Home Manager release that your
   # configuration is compatible with. This helps avoid breakage
@@ -38,7 +38,8 @@
     ".config/nvim".source = config.lib.file.mkOutOfStoreSymlink "/home/denast/.dots/nvim";
     ".config/ranger".source = config.lib.file.mkOutOfStoreSymlink "/home/denast/.dots/ranger";
     ".config/rofi".source = config.lib.file.mkOutOfStoreSymlink "/home/denast/.dots/rofi";
-    ".config/starship.toml".source = config.lib.file.mkOutOfStoreSymlink "/home/denast/.dots/starship.toml";
+    ".config/starship.toml".source =
+      config.lib.file.mkOutOfStoreSymlink "/home/denast/.dots/starship.toml";
     ".config/swappy".source = config.lib.file.mkOutOfStoreSymlink "/home/denast/.dots/swappy";
     ".config/waybar".source = config.lib.file.mkOutOfStoreSymlink "/home/denast/.dots/waybar";
     ".config/wofi".source = config.lib.file.mkOutOfStoreSymlink "/home/denast/.dots/wofi";
@@ -76,10 +77,10 @@
   xdg.mimeApps = {
     enable = true;
     defaultApplications = {
-      "inode/directory" = ["thunar.desktop"];
-      "image/png" = ["nsxiv.desktop"];
-      "image/jpeg" = ["nsxiv.desktop"];
-      "image/gif" = ["nsxiv.desktop"];
+      "inode/directory" = [ "thunar.desktop" ];
+      "image/png" = [ "nsxiv.desktop" ];
+      "image/jpeg" = [ "nsxiv.desktop" ];
+      "image/gif" = [ "nsxiv.desktop" ];
       "text/html" = "librewolf.desktop";
       "x-scheme-handler/http" = "librewolf.desktop";
       "x-scheme-handler/https" = "librewolf.desktop";

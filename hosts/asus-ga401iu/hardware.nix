@@ -1,4 +1,10 @@
-{ config, lib, pkgs, modulesPath, ... }:
+{
+  config,
+  lib,
+  pkgs,
+  modulesPath,
+  ...
+}:
 
 {
   imports = [
@@ -10,25 +16,37 @@
   boot.kernelPackages = pkgs.linuxPackages_latest;
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
-  boot.initrd.luks.devices."luks-d16b5f87-310e-4d97-9c6d-39ec9b6cd648".device = "/dev/disk/by-uuid/d16b5f87-310e-4d97-9c6d-39ec9b6cd648";
+  boot.initrd.luks.devices."luks-d16b5f87-310e-4d97-9c6d-39ec9b6cd648".device =
+    "/dev/disk/by-uuid/d16b5f87-310e-4d97-9c6d-39ec9b6cd648";
 
   # Existing hardware configuration content
-  boot.initrd.availableKernelModules = [ "xhci_pci" "nvme" "ahci" "usbhid" "usb_storage" "sd_mod" ];
-  boot.initrd.kernelModules = [];
+  boot.initrd.availableKernelModules = [
+    "xhci_pci"
+    "nvme"
+    "ahci"
+    "usbhid"
+    "usb_storage"
+    "sd_mod"
+  ];
+  boot.initrd.kernelModules = [ ];
   boot.kernelModules = [ "kvm-amd" ];
-  boot.extraModulePackages = [];
+  boot.extraModulePackages = [ ];
 
   fileSystems."/" = {
     device = "/dev/disk/by-uuid/c9166c90-248c-432c-8e67-255d66b92d09";
     fsType = "ext4";
   };
 
-  boot.initrd.luks.devices."luks-feeb604c-b691-468e-a986-b92b42365bdc".device = "/dev/disk/by-uuid/feeb604c-b691-468e-a986-b92b42365bdc";
+  boot.initrd.luks.devices."luks-feeb604c-b691-468e-a986-b92b42365bdc".device =
+    "/dev/disk/by-uuid/feeb604c-b691-468e-a986-b92b42365bdc";
 
   fileSystems."/boot" = {
     device = "/dev/disk/by-uuid/50B4-A257";
     fsType = "vfat";
-    options = [ "fmask=0022" "dmask=0022" ];
+    options = [
+      "fmask=0022"
+      "dmask=0022"
+    ];
   };
 
   swapDevices = [
@@ -47,7 +65,7 @@
   # for razer mice
   hardware.openrazer.enable = true;
 
-  hardware.graphics= {
+  hardware.graphics = {
     enable = true;
   };
   hardware.nvidia = {

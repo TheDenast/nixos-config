@@ -10,7 +10,10 @@
     inputs.home-manager.nixosModules.default
   ];
 
-  nix.settings.experimental-features = [ "nix-command" "flakes" ];
+  nix.settings.experimental-features = [
+    "nix-command"
+    "flakes"
+  ];
 
   time.timeZone = "America/New_York";
   i18n.defaultLocale = "en_US.UTF-8";
@@ -28,7 +31,7 @@
 
   security.rtkit.enable = true;
 
-  # needed for qemu & virt-manager virtualisation 
+  # needed for qemu & virt-manager virtualisation
   virtualisation.spiceUSBRedirection.enable = true;
   virtualisation.libvirtd.enable = true;
 
