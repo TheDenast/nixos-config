@@ -86,7 +86,8 @@ in
     lazygit # git TUI wrapper
     gcc # C compiler
     clang-tools # clandg toolkit
-    python3 # Python compiler/interpreter
+    python312 # python compiler/interpreter
+    python312Packages.pip # python package manager
     gnumake # Makefile support
     valgrind # Memory management analysis tool
     rustc # Rust compiler
@@ -99,6 +100,7 @@ in
     go # google something something language
     lua # Lua language
     lua-language-server # lsp for lua
+    stylua # opinionated lua formatter
     nixfmt-rfc-style # opinionated formatter for Nix
     nixd # Nix lsp (configurable but heavy)
     nil # Nix lsp (light but basic)
