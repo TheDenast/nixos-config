@@ -28,6 +28,16 @@
   boot.kernelModules = [ "kvm-amd" ];
   boot.extraModulePackages = [ ];
 
+  boot.kernelParams = [
+    "quiet"
+    "loglevel=3"
+    "rd.systemd.show_status=false"
+    "rd.udev.log_level=3"
+    "udev.log_priority=3"
+  ];
+  boot.consoleLogLevel = 0;
+  boot.initrd.verbose = false;
+
   fileSystems."/" = {
     device = "/dev/disk/by-uuid/aa6989aa-6f70-4712-b8aa-fbfba346b478";
     fsType = "ext4";
