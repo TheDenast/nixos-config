@@ -104,6 +104,7 @@ in
     nixfmt-rfc-style # opinionated formatter for Nix
     nixd # Nix lsp (configurable but heavy)
     nil # Nix lsp (light but basic)
+    wakatime-cli # util to track codin' activity
 
     # Dev Stuff
     pgadmin4-desktopmode # Administration and development platform for PostgreSQL
