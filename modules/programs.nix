@@ -29,4 +29,6 @@
 
   # Gamemode (should enchance gaming :O)
   programs.gamemode.enable = true;
+
+  programs.adb.enable = true;
 }

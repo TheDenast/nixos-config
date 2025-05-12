@@ -91,8 +91,10 @@ in
     gnumake # Makefile support
     valgrind # Memory management analysis tool
     rustc # Rust compiler
-    rustup # Rust toolchain installer
     cargo # Rust dependencies manager
+    rust-analyzer # Rust lsp
+    rustfmt # Rust formatter
+    clippy # Rust linter
     basedpyright # python type checker
     ruff # python linter
     black # uncompromising python formatter

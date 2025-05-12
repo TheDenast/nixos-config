@@ -9,6 +9,7 @@
       "wheel"
       "openrazer"
       "input"
+      "adbusers"
     ];
     packages = with pkgs; [
       kdePackages.kate
