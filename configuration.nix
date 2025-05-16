@@ -1,4 +1,4 @@
-{ inputs, lib, ... }:
+{ inputs, ... }:
 
 {
   imports = [
@@ -35,9 +35,15 @@
   virtualisation.spiceUSBRedirection.enable = true;
   virtualisation.libvirtd.enable = true;
 
+  # docker
+  virtualisation.docker.rootless = {
+    enable = true;
+    setSocketVariable = true;
+  };
+
   # android virtualisation
   # virtualisation.waydroid.enable = true;
 
   nixpkgs.config.allowUnfree = true;
-  # system.stateVersion = "unstable";
+  system.stateVersion = "25.05";
 }

@@ -26,25 +26,6 @@
     in
     {
       nixosConfigurations = {
-        asus-ga401iu = nixpkgs.lib.nixosSystem {
-          inherit system;
-          specialArgs = { inherit inputs; };
-          modules = [
-            { nixpkgs.config = nixpkgsConfig; }
-            ./configuration.nix
-            ./hosts/asus-ga401iu
-            home-manager.nixosModules.home-manager
-            {
-              home-manager = {
-                useGlobalPkgs = true;
-                useUserPackages = true;
-                extraSpecialArgs = { inherit inputs; };
-                users.denast = import ./home.nix;
-              };
-            }
-          ];
-        };
-
         framework-13 = nixpkgs.lib.nixosSystem {
           inherit system;
           specialArgs = { inherit inputs; };

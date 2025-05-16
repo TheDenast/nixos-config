@@ -4,7 +4,7 @@
 ## Features
 
 - Flakes + Home Manager
-- Multiple configurations in a single config (see below)
+- Multiple configurations in a single config (potentially)
 
 ## Deployment Instructions
 
@@ -15,9 +15,8 @@
    git clone https://github.com/TheDenast/nixos-config.git /home/denast/.nixos-config
    ```
 
-2. Select configuration to build. Currently available:
+2. Select configuration to build. Currently only one available:
 
-   - `asus-ga401iu`
    - `framework-13`
 
 3. Rebuild the System with the New Configuration:

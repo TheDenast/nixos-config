@@ -1,8 +1,4 @@
 { pkgs, ... }:
-
-let
-  cursorsh = pkgs.callPackage ./cursorsh.nix { };
-in
 {
   environment.systemPackages = with pkgs; [
     # Eye Candy
