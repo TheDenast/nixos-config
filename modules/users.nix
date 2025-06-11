@@ -15,6 +15,4 @@
       kdePackages.kate
     ];
   };
-
-  # Remove the home-manager configuration from here
 }
