@@ -36,9 +36,8 @@
   virtualisation.libvirtd.enable = true;
 
   # docker
-  virtualisation.docker.rootless = {
+  virtualisation.docker = {
     enable = true;
-    setSocketVariable = true;
   };
 
   # android virtualisation
