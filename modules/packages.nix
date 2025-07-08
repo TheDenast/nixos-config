@@ -35,6 +35,7 @@
     bat # modern `cat` alternative
     yazi # modern cli file manager
     mgitstatus # quickly see status of git repos
+    rclone # cli program to sync files and directories to and from cloud
 
     # OS-Utils
     waybar # bar for hyprland
@@ -149,7 +150,6 @@
     imagemagick # cli image-related stuff
 
     # security
-    yubikey-personalization-gui
     yubioath-flutter
     opensc
     gnupg
