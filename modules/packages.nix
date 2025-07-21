@@ -71,7 +71,6 @@
     zip # zip archive support
     unzip # handy to quickly unpack zips
     sshfs # mount filesystems over ssh
-    nodejs_22 # javasript stuff
     rsync # file copying util (and more!)
 
     # Codin'
@@ -154,6 +153,22 @@
     opensc
     gnupg
     pinentry
+
+    # TypeScript/JavaScript development
+    typescript-language-server
+    nodePackages.vscode-langservers-extracted # JSON, HTML, CSS, ESLint
+    nodePackages.prettier
+    nodePackages.eslint
+
+    # Docker support
+    docker-compose-language-service
+    nodePackages.dockerfile-language-server-nodejs
+
+    # Node.js ecosystem
+    nodejs
+    nodePackages.npm
+    nodePackages.typescript
+
   ];
 
   # Font definitions
