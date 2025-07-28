@@ -165,6 +165,7 @@
     nodePackages.dockerfile-language-server-nodejs
 
     # Node.js ecosystem
+    nodejs_22
     nodejs
     nodePackages.npm
     nodePackages.typescript
