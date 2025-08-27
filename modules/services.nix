@@ -17,9 +17,7 @@
   # Needed for secret saving on hyprland
   services.gnome.gnome-keyring.enable = true;
 
-  # Load nvidia driver for Xorg and Wayland
   services.xserver.videoDrivers = [
-    #    "nvidia"
     "amdgpu"
   ];
 
@@ -56,8 +54,27 @@
   };
 
   services.flatpak.enable = true;
-  xdg.portal.extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
-  xdg.portal.config.common.default = "gtk";
+  
+  # Enhanced XDG portal configuration for Wayland/gamescope
+  xdg.portal = {
+    enable = true;
+    extraPortals = with pkgs; [ 
+      xdg-desktop-portal-gtk 
+      xdg-desktop-portal-wlr
+    ];
+    config = {
+      common = {
+        default = "gtk";
+        "org.freedesktop.impl.portal.Screenshot" = "wlr";
+        "org.freedesktop.impl.portal.ScreenCast" = "wlr";
+      };
+      hyprland = {
+        default = "gtk";
+        "org.freedesktop.impl.portal.Screenshot" = "wlr";
+        "org.freedesktop.impl.portal.ScreenCast" = "wlr";
+      };
+    };
+  };
 
   services.syncthing = {
     enable = true;
