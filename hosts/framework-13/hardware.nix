@@ -81,5 +81,14 @@
 
   hardware.graphics = {
     enable = true;
+    enable32Bit = true; # Critical for Steam games
+    extraPackages = with pkgs; [
+      amdvlk # AMD Vulkan driver
+      rocmPackages.clr.icd # OpenCL support
+    ];
+    extraPackages32 = with pkgs.driversi686Linux; [
+      amdvlk # 32-bit Vulkan driver
+    ];
   };
+
 }

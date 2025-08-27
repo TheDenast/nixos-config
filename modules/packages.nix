@@ -36,6 +36,7 @@
     yazi # modern cli file manager
     mgitstatus # quickly see status of git repos
     rclone # cli program to sync files and directories to and from cloud
+    ansible # remote server orchestration software
 
     # OS-Utils
     waybar # bar for hyprland
@@ -62,6 +63,8 @@
     xclip # something something xorg clipboard
     hyprshot # hyprland screenshot tool
     nwg-displays # gui tool for quick monitor setup
+    python313Packages.passlib # need it for matrix ansible
+    just # need it for matrix ansible
 
     # CLI-Utils
     fd # file search
@@ -76,7 +79,7 @@
     # Codin'
     direnv # nixos tool for dev environments
     vim # grandpa
-    neovim # THE editor
+    neovim-unwrapped # THE editor
     code-cursor # AI IDE built on VS-Code
     git # versioning software
     lazygit # git TUI wrapper
@@ -84,6 +87,7 @@
     clang-tools # clandg toolkit
     python312 # python compiler/interpreter
     python312Packages.pip # python package manager
+    uv # modern python package manager
     gnumake # Makefile support
     valgrind # Memory management analysis tool
     rustc # Rust compiler
@@ -170,6 +174,26 @@
     nodePackages.npm
     nodePackages.typescript
 
+    # Wayland and gamescope dependencies
+    libdecor
+    wayland
+    wayland-protocols
+    wayland-utils
+    vulkan-loader
+    vulkan-tools
+
+    # Additional Wayland support
+    wl-clipboard
+    wlr-randr
+    xwayland
+
+    # Gaming essentials
+    mesa
+    libva
+    libva-utils
+
+    # sort later
+    anydesk
   ];
 
   # Font definitions
