@@ -49,8 +49,6 @@
     wl-clipboard # copy/paste utility for wayland
     lxqt.lxqt-policykit # polkit for GUI sudo authentication
     pavucontrol # pulse audio control
-    gparted # partition manager/editor
-    libsForQt5.partitionmanager # gparted alternative??
     xorg.xhost # gparted doesn't start on wayland without it
     appimage-run # nixos doesn't support the format otherwise
     grim # grap wayland images
@@ -62,7 +60,7 @@
     brightnessctl # used to control screen backlight
     xclip # something something xorg clipboard
     hyprshot # hyprland screenshot tool
-    nwg-displays # gui tool for quick monitor setup
+    # nwg-displays # gui tool for quick monitor setup
     python313Packages.passlib # need it for matrix ansible
     just # need it for matrix ansible
 
