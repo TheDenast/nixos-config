@@ -3,8 +3,6 @@
 {
   services.xserver.enable = true;
 
-  services.xserver.desktopManager.plasma5.enable = false;
-
   services.xserver.displayManager.startx.enable = true;
 
   #  services.displayManager.sddm.package = pkgs.kdePackages.sddm;
@@ -54,12 +52,12 @@
   };
 
   services.flatpak.enable = true;
-  
+
   # Enhanced XDG portal configuration for Wayland/gamescope
   xdg.portal = {
     enable = true;
-    extraPortals = with pkgs; [ 
-      xdg-desktop-portal-gtk 
+    extraPortals = with pkgs; [
+      xdg-desktop-portal-gtk
       xdg-desktop-portal-wlr
     ];
     config = {
