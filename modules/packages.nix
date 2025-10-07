@@ -127,6 +127,7 @@
     wowup-cf # WoW addon manager
     moonlight-qt # remote game streaming
     prismlauncher # minecraft
+    godot # game engine
 
     # Social
     telegram-desktop # messaging
