@@ -92,8 +92,6 @@
   security.pam.services.sudo.fprintAuth = true;
 
   services.udev.packages = [
-    pkgs.nrf-udev
-    pkgs.segger-jlink
     pkgs.yubikey-personalization
   ];
 
