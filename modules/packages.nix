@@ -60,7 +60,7 @@
     brightnessctl # used to control screen backlight
     xclip # something something xorg clipboard
     hyprshot # hyprland screenshot tool
-    # nwg-displays # gui tool for quick monitor setup
+    nwg-displays # gui tool for quick monitor setup
     python313Packages.passlib # need it for matrix ansible
     just # need it for matrix ansible
 
