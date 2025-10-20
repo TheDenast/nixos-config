@@ -22,9 +22,9 @@ window#waybar {
   min-height: 0;
 }
 #workspaces button label {
-  font-size: 25px;
-  margin-top: -4px;
-  margin-bottom: -4px;
+  font-size: 30px;
+  margin-top: -8px;
+  margin-bottom: -8px;
 }
 #workspaces button:hover {
   box-shadow: inherit;
