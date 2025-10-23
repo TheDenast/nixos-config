@@ -150,6 +150,7 @@
     mullvad-browser # hardened firefox fork from mullvad
     gimp # image editor
     imagemagick # cli image-related stuff
+    anki # word repetition software
 
     # security
     yubioath-flutter
