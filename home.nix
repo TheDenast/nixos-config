@@ -8,8 +8,12 @@
 
   programs.git = {
     enable = true;
-    userName = "denast";
-    userEmail = "denast@proton.me";
+    settings = {
+      user = {
+        name = "denast";
+        email = "denast@proton.me";
+      };
+    };
   };
 
   # This value determines the Home Manager release that your

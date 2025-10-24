@@ -47,7 +47,6 @@
     fusuma # touchpad gestures
     networkmanagerapplet # network applet
     wl-clipboard # copy/paste utility for wayland
-    lxqt.lxqt-policykit # polkit for GUI sudo authentication
     pavucontrol # pulse audio control
     xorg.xhost # gparted doesn't start on wayland without it
     appimage-run # nixos doesn't support the format otherwise
@@ -55,7 +54,6 @@
     slurp # select part of wayland workspace
     swappy # screenshot tool
     flameshot # all-in-one screenshot tool
-    kdePackages.xwaylandvideobridge # allows screencapture for X.org apps
     openrazer-daemon # allows to use razer devices
     brightnessctl # used to control screen backlight
     xclip # something something xorg clipboard
@@ -166,7 +164,6 @@
 
     # Docker support
     docker-compose-language-service
-    nodePackages.dockerfile-language-server-nodejs
 
     # Node.js ecosystem
     nodejs_22
