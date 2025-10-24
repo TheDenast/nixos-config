@@ -30,6 +30,7 @@
   };
 
   security.rtkit.enable = true;
+  security.polkit.enable = true;
 
   # needed for qemu & virt-manager virtualisation
   virtualisation.spiceUSBRedirection.enable = true;
