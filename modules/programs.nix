@@ -27,11 +27,7 @@
 
   programs.gamescope = {
     enable = true;
-    capSysNice = true;
   };
-  programs.steam.gamescopeSession.enable = true;
-
-  # programs.firefox.enable = true;
 
   # Gamemode (should enchance gaming :O)
   programs.gamemode.enable = true;
