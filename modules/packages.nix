@@ -130,6 +130,7 @@
     # Social
     telegram-desktop # messaging
     vesktop # containerized discord w/ fixed screen share
+    discord # self explanotary
     slack # messaging app I use @ work
     element-desktop # matrix client
 
@@ -154,7 +155,6 @@
     yubioath-flutter
     opensc
     gnupg
-    pinentry
 
     # TypeScript/JavaScript development
     typescript-language-server
