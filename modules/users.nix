@@ -10,6 +10,7 @@
       "openrazer"
       "input"
       "adbusers"
+      "gamemode"
     ];
     packages = with pkgs; [
       kdePackages.kate
