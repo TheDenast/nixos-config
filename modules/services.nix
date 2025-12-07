@@ -113,4 +113,6 @@
   };
 
   services.fwupd.enable = true;
+
+  services.ratbagd.enable = true;
 }

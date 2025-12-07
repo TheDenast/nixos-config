@@ -71,6 +71,7 @@
     unzip # handy to quickly unpack zips
     sshfs # mount filesystems over ssh
     rsync # file copying util (and more!)
+    fw-ectool # framework embedded controller tool (mainly for manual fan control)
 
     # Codin'
     direnv # nixos tool for dev environments
@@ -112,6 +113,7 @@
     # nrfutil     # Device Firmware Update tool for nRF chips
     # nrf5-sdk    # Nordic Semiconductor nRF5 Software Development Kit
     nrfconnect # Nordic Semiconductor nRF Connect for Desktop
+    openvpn # for connection to corporate vpn
 
     # Productivity
     obsidian # notes / knowledge base
@@ -126,6 +128,7 @@
     moonlight-qt # remote game streaming
     prismlauncher # minecraft
     godot # game engine
+    piper # software to configure logitech mice
 
     # Social
     telegram-desktop # messaging

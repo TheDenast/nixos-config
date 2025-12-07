@@ -24,5 +24,11 @@
     useRoutingFeatures = "client";
   };
 
-  # programs.openvpn3.enable = true;
+  services.openvpn.servers = {
+    amplified = {
+      config = ''config /home/denast/.secrets/amplified_vpn.conf '';
+      updateResolvConf = true;
+      autoStart = false;
+    };
+  };
 }
