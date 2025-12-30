@@ -113,6 +113,7 @@
   };
 
   services.fwupd.enable = true;
+  services.fwupd.package = pkgs.fwupd;
 
   services.ratbagd.enable = true;
 }
