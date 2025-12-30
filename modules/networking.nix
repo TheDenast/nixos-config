@@ -2,7 +2,7 @@
 
 {
   networking.networkmanager.enable = true;
-  networking.wireless.enable = false;
+  # networking.wireless.enable = false;
 
   networking.firewall = {
     enable = true;
