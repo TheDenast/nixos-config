@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # Path to wallpaper collection
-WALLPAPER_DIR="/home/denast/Pictures/wallpaper-collection/dracula/"
+WALLPAPER_DIR="/home/denast/files/3_technology/33_\$wallpapers/dracula/"
 
 # Get all connected monitors
 MONITORS=$(hyprctl monitors -j | jq -r '.[].name')
