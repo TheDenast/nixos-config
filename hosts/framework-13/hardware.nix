@@ -89,4 +89,23 @@
     ];
   };
 
+  # This stuff is supposed to help with power throttling I'm experiencing in games
+  # although I'm not sure about this
+  services.power-profiles-daemon.enable = false;
+  services.tlp.enable = false;
+  services.auto-cpufreq = {
+    enable = true;
+    settings = {
+      # https://github.com/AdnanHodzic/auto-cpufreq
+      battery = {
+        governor = "powersave";
+        turbo = "never";
+      };
+      charger = {
+        governor = "performance";
+        turbo = "auto";
+      };
+    };
+  };
+
 }
