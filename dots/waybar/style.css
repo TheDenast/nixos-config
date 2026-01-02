@@ -67,3 +67,18 @@ window#waybar {
   padding: 0 10px; /* Increase padding on hover */
   transition: all 0.3s ease; /* Smooth transition for hover effect */
 }
+#custom-fan {
+  margin: 0 2px;
+  color: @foreground;
+  border: none;
+  border-radius: 5px;
+  padding: 0 10px;
+}
+
+#custom-fan:hover {
+  box-shadow: inherit;
+  text-shadow: inherit;
+  background-image: linear-gradient(0deg, @purple, @selection);
+  padding: 0 10px;
+  transition: all 0.3s ease;
+}
