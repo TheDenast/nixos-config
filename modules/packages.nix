@@ -61,6 +61,7 @@
     nwg-displays # gui tool for quick monitor setup
     python313Packages.passlib # need it for matrix ansible
     just # need it for matrix ansible
+    hyprsunset # blue light filter for hyprland
 
     # CLI-Utils
     fd # file search
