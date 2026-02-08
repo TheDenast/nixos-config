@@ -32,8 +32,6 @@
   # Gamemode (should enchance gaming :O)
   programs.gamemode.enable = true;
 
-  programs.adb.enable = true;
-
   # used to launch dynamically linked execs
   programs.nix-ld.enable = true;
 }
