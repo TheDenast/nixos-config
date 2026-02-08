@@ -117,6 +117,7 @@
     nrfconnect # Nordic Semiconductor nRF Connect for Desktop
     openvpn # for connection to corporate vpn
     awscli2 # for AWS work
+    android-tools # adb and friends
 
     # Productivity
     obsidian # notes / knowledge base
