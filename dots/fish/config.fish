@@ -9,7 +9,7 @@ alias zz="yazi"
 alias gg="lazygit"
 alias ll="eza -lh --group-directories-first --icons --no-permissions --no-user"
 alias cnvim='function _cnvim; z $argv; nvim .; end; _cnvim'
-alias mgs='mgitstatus -d 3 --no-upstream -c /home/denast/.nixos-config/ /home/denast/.dots/ | sed \'s/\/home\/denast\///\'; mgitstatus -d 3 --no-upstream -c /home/denast/Pictures/ | sed \'s/\/home\/denast\/Pictures\///\'; mgitstatus -d 3 --no-upstream -c /home/denast/Projects/ | sed \'s/\/home\/denast\/Projects\///\''
+alias mgs='mgitstatus -d 3 --no-upstream -c /home/denast/files | sed \'s|.*/\([^/:]*\):|\1:|\' | sort -t\'-\' -k1 -n'
 alias sl='sl -w -10 -d'
 alias vpn-browser='bash /home/denast/.dots/scripts/tailscale-vpn-browser.sh'
 setenv EDITOR nvim
