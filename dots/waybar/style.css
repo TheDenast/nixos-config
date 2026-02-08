@@ -4,7 +4,7 @@
   border-radius: 0;
   font-family: "JetBrainsMonoNL Nerd Font Mono";
   font-size: 14pt;
-  min-height: 0;
+  min-height: 18pt;
   font-weight: 400;
 }
 window#waybar {
@@ -73,6 +73,7 @@ window#waybar {
   border: none;
   border-radius: 5px;
   padding: 0 10px;
+  font-family: "JetBrainsMonoNL Nerd Font";
 }
 
 #custom-fan:hover {

@@ -10,7 +10,7 @@
     "clock"
   ],
   "modules-right": [
-    "tray","custom/fan","pulseaudio","privacy","battery"
+    "privacy","tray","custom/fan","pulseaudio","battery"
   ],
   "hyprland/workspaces": {
     "format": "{icon}",
@@ -126,7 +126,7 @@
   },
   "custom/fan": {
     "format": "{}",
-    "exec": "[ -f /tmp/fan_state ] && echo '󰈐 MAX' || echo '󰈐 AUTO'",
+    "exec": "[ -f /tmp/fan_state ] && echo ' 󱑮 ' || echo ' 󱜝 '",
     "interval": 2,
     "on-click": "~/.config/waybar/fan_state.sh"
   }
