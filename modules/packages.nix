@@ -62,6 +62,7 @@
     python313Packages.passlib # need it for matrix ansible
     just # need it for matrix ansible
     hyprsunset # blue light filter for hyprland
+    lxqt.lxqt-policykit # polkit
 
     # CLI-Utils
     fd # file search
@@ -106,10 +107,12 @@
     nil # Nix lsp (light but basic)
     wakatime-cli # util to track codin' activity
     claude-code # Claude terminal-based AI agent
+    gh # github cli tool
 
     # Dev Stuff
     pgadmin4-desktopmode # Administration and development platform for PostgreSQL
     postman # API development
+    bruno # API dev
     # stm32cubemx # STM32 Microcontroller IDE
     # nrf-command-line-tools # Nordic Semiconductor nRF Command Line Tools
     # nrfutil     # Device Firmware Update tool for nRF chips
