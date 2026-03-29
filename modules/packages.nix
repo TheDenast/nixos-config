@@ -2,7 +2,7 @@
 {
   environment.systemPackages = with pkgs; [
     # Eye Candy
-    neofetch # >:P
+    fastfetch # >:P
     pfetch # minimal neofetch alternative
     bfetch # utility to center and organize fetch apps
     gtk2
