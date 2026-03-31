@@ -84,8 +84,9 @@
     lazygit # git TUI wrapper
     gcc # C compiler
     clang-tools # clandg toolkit
-    python312 # python compiler/interpreter
-    python312Packages.pip # python package manager
+    # python312 # python compiler/interpreter
+    # python312Packages.pip # python package manager
+    # (python312.withPackages (ps: with ps; [ pip ]))
     uv # modern python package manager
     gnumake # Makefile support
     valgrind # Memory management analysis tool
