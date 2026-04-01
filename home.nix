@@ -1,8 +1,6 @@
 { config, pkgs, ... }:
 
 {
-  # Home Manager needs a bit of information about you and the
-  # paths it should manage.
   home.username = "denast";
   home.homeDirectory = "/home/denast";
 
@@ -16,17 +14,13 @@
     };
   };
 
-  # This value determines the Home Manager release that your
-  # configuration is compatible with. This helps avoid breakage
-  # when a new Home Manager release introduces backwards
-  # incompatible changes.
-  #
-  # You can update Home Manager without changing this value. See
-  # the Home Manager release notes for a list of state version
-  # changes in each release.
+  programs.direnv = {
+    enable = true;
+    nix-direnv.enable = true;
+  };
+
   home.stateVersion = "24.11";
 
-  # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
 
   home.file = {
@@ -92,9 +86,4 @@
       "x-scheme-handler/unknown" = "librewolf.desktop";
     };
   };
-
-  # programs.kitty = {
-  #   enable = true;
-  #   theme = "Dracula";
-  # };
 }

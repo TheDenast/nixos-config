@@ -14,8 +14,7 @@
 
   programs.hyprland = {
     enable = true;
-    withUWSM = true; # universal wayland session manager
-    # Whether to enable XWayland
+    withUWSM = true;
     xwayland.enable = true;
   };
 
@@ -34,4 +33,9 @@
 
   # used to launch dynamically linked execs
   programs.nix-ld.enable = true;
+
+  programs.gnupg.agent = {
+    enable = true;
+    enableSSHSupport = true;
+  };
 }
