@@ -7,6 +7,7 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    nixos-hardware.url = "github:NixOS/nixos-hardware/master";
   };
 
   outputs =
@@ -14,6 +15,7 @@
       self,
       nixpkgs,
       home-manager,
+      nixos-hardware,
       ...
     }@inputs:
     let
@@ -25,6 +27,8 @@
       };
     in
     {
+      formatter.x86_64-linux = nixpkgs.legacyPackages.x86_64-linux.nixfmt-rfc-style;
+
       nixosConfigurations = {
         framework-13 = nixpkgs.lib.nixosSystem {
           inherit system;
@@ -33,6 +37,7 @@
             { nixpkgs.config = nixpkgsConfig; }
             ./configuration.nix
             ./hosts/framework-13
+            nixos-hardware.nixosModules.framework-13-7040-amd
             home-manager.nixosModules.home-manager
             {
               home-manager = {

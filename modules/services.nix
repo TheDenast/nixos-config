@@ -5,13 +5,6 @@
 
   services.xserver.displayManager.startx.enable = true;
 
-  #  services.displayManager.sddm.package = pkgs.kdePackages.sddm;
-  #  services.displayManager.sddm = {
-  #    enable = true;
-  #    extraPackages = with pkgs; [qt6.qt5compat];
-  #    theme = "where_is_my_sddm_theme";
-  # };
-
   # Needed for secret saving on hyprland
   services.gnome.gnome-keyring.enable = true;
 
@@ -26,12 +19,6 @@
   };
 
   services.printing.enable = true;
-  # services.printing.drivers = [ pkgs.cnijfilter2 pkgs.canon-cups-ufr2 ];
-  # services.avahi = {
-  #   enable = true;
-  #   nssmdns4 = true;
-  #   openFirewall = true;
-  # };
 
   services.pipewire = {
     enable = true;
@@ -96,7 +83,6 @@
     };
   };
 
-  # Install the driver
   services.fprintd.enable = true;
 
   security.pam.services.sudo.fprintAuth = true;
@@ -106,11 +92,6 @@
   ];
 
   services.pcscd.enable = true;
-
-  programs.gnupg.agent = {
-    enable = true;
-    enableSSHSupport = true;
-  };
 
   services.fwupd.enable = true;
   services.fwupd.package = pkgs.fwupd;

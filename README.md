@@ -1,69 +1,64 @@
 # Denast NixOS Configuration
-> **A configuration for NixOS that I personally daily drive**
 
-## Features
+## Repo structure
 
-- Flakes + Home Manager
-- Multiple configurations in a single config (potentially)
+```
+.
+├── flake.nix                    # Flake entry point (inputs, outputs, formatter)
+├── configuration.nix            # Shared system config (locale, GC, auto-upgrade, virtualisation)
+├── home.nix                     # Home Manager (dotfiles, direnv, GTK theme, mime apps)
+├── hosts/
+│   └── framework-13/
+│       ├── default.nix          # Host entry (hostname)
+│       └── hardware.nix         # Generated hardware config + Framework-specific tweaks
+└── modules/
+    ├── networking.nix
+    ├── programs.nix             # Hyprland, Steam, gamescope, gamemode, gnupg, nix-ld
+    ├── services.nix             # Pipewire, SSH, Syncthing, fprintd, XDG portals, etc.
+    ├── users.nix
+    └── packages/
+        ├── default.nix          # Imports all package modules
+        ├── cli.nix              # Shells, terminal, CLI tools, fun
+        ├── desktop.nix          # Hyprland ecosystem, Wayland, theming, fonts
+        ├── development.nix      # Editors, languages, LSPs, dev tools
+        ├── gaming.nix           # Games, Wine/Proton, GPU/Vulkan
+        └── apps.nix             # Browsers, social, productivity, media, security
+```
 
-## Deployment Instructions
+## Quick reference
 
-### Initial Setup
+```sh
+# Rebuild and switch immediately
+sudo nixos-rebuild switch --flake /home/denast/.nixos-config#framework-13
 
-1. Clone the Repository on the New Machine:
-   ```sh
-   git clone https://github.com/TheDenast/nixos-config.git /home/denast/.nixos-config
-   ```
+# Rebuild into bootloader only (activate on next reboot)
+sudo nixos-rebuild boot --flake /home/denast/.nixos-config#framework-13
 
-2. Select configuration to build. Currently only one available:
+# Update flake inputs
+cd /home/denast/.nixos-config && nix flake update
 
-   - `framework-13`
+# Format all Nix files
+nix fmt
 
-3. Rebuild the System with the New Configuration:
-   ```sh
-   sudo nixos-rebuild switch --flake /home/denast/.nixos-config#{configuration}
-   ```
-   Where `{configuration}` is your configuration of choice
+# Garbage-collect old generations
+nix-collect-garbage -d
 
-### System Updates
+# Rollback to previous generation
+sudo nixos-rebuild switch --rollback
 
-Since the configuration uses flakes to overwrite pinned nixpkgs version,
-in order to complete the system update you have to update the flake.lock first
+# List system generations
+nix profile history --profile /nix/var/nix/profiles/system
+```
 
-1. Update flake.lock 
-   ```sh
-   cd /home/denast/.nixos-config
-   nix flake update
-   ```
+## Auto-upgrade
 
-2. Rebuild the system with new flake.lock
-   ```sh
-   sudo nixos-rebuild switch --flake /home/denast/.nixos-config#{configuration}
-   ```
+`system.autoUpgrade` is configured to run `nixos-rebuild boot` daily at 04:00 with idle CPU/IO scheduling. New generations are registered in the bootloader but never activate until you reboot. The Nix daemon yields all resources to foreground tasks, so builds won't affect gaming or other workloads.
 
-3. If the update went well, commit and push the changes
-   ```sh
-   git add .
-   git commit -m "Flake update"
-   git push
-   ```
+Manual `nix flake update` + rebuild is still needed if you want to update inputs on your own schedule.
 
-### Configuration Updates
+## Initial setup
 
-1. Make changes to the configuration:
-   ```sh
-   cd /home/denast/.nixos-config
-   nvim configuration.nix  # or any other editor
-   ```
-
-2. Rebuild the system to test the changes:
-   ```sh
-   sudo nixos-rebuild switch --flake /home/denast/.nixos-config#{configuration}
-   ```
-
-3. If all went well, commit and push the changes:
-   ```sh
-   git add .
-   git commit -m "specify what you changed here"
-   git push
-   ```
+```sh
+git clone https://github.com/TheDenast/nixos-config.git /home/denast/.nixos-config
+sudo nixos-rebuild switch --flake /home/denast/.nixos-config#framework-13
+```
