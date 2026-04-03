@@ -19,6 +19,17 @@
     nix-direnv.enable = true;
   };
 
+  programs.distrobox = {
+    enable = true;
+    containers = {
+      ubuntu = {
+        image = "ubuntu:24.04";
+        entry = true;
+        additional_packages = "git curl wget build-essential software-properties-common";
+      };
+    };
+  };
+
   home.stateVersion = "24.11";
 
   programs.home-manager.enable = true;

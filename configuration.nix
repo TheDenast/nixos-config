@@ -55,9 +55,17 @@
   virtualisation.spiceUSBRedirection.enable = true;
   virtualisation.libvirtd.enable = true;
 
-  virtualisation.docker = {
+  virtualisation.podman = {
     enable = true;
+    dockerCompat = true;
   };
+
+  programs.appimage = {
+    enable = true;
+    binfmt = true;
+  };
+
+  programs.nix-ld.enable = true;
 
   # Environment variables for proper Wayland/gamescope operation
   environment.sessionVariables = {
