@@ -24,14 +24,6 @@
   nix.daemonCPUSchedPolicy = "idle";
   nix.daemonIOSchedClass = "idle";
 
-  system.autoUpgrade = {
-    enable = true;
-    flake = "/home/denast/.nixos-config#framework-13";
-    operation = "boot";
-    allowReboot = false;
-    dates = "02:00";
-  };
-
   time.timeZone = "Asia/Yerevan";
   i18n.defaultLocale = "en_US.UTF-8";
   i18n.extraLocaleSettings = {
