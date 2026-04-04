@@ -29,7 +29,7 @@
     flake = "/home/denast/.nixos-config#framework-13";
     operation = "boot";
     allowReboot = false;
-    dates = "04:00";
+    dates = "02:00";
   };
 
   time.timeZone = "Asia/Yerevan";
