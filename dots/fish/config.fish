@@ -9,7 +9,8 @@ alias zz="yazi"
 alias gg="lazygit"
 alias ll="eza -lh --group-directories-first --icons --no-permissions --no-user"
 alias cnvim='function _cnvim; z $argv; nvim .; end; _cnvim'
-alias mgs='mgitstatus -d 3 --no-upstream -c /home/denast/files | sed \'s|.*/\([^/:]*\):|\1:|\' | sort -t\'-\' -k1 -n'
+alias mgs='mgitstatus -d 3 --no-upstream -c /home/denast/files /home/denast/.nixos-config /home/denast/.dots | sed \'s|.*/\([^/:]*\):|\1:|\' | sort -t\'-\' -k1 -n'
+alias nixos-update='nix flake update --flake /home/denast/.nixos-config && sudo nixos-rebuild switch --flake /home/denast/.nixos-config#framework-13 && git -C /home/denast/.nixos-config add flake.lock && git -C /home/denast/.nixos-config commit -m "flake: update inputs"'
 alias sl='sl -w -10 -d'
 alias vpn-browser='bash /home/denast/.dots/scripts/tailscale-vpn-browser.sh'
 setenv EDITOR nvim
