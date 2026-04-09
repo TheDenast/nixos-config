@@ -47,12 +47,11 @@
 
     # Node.js / TypeScript
     nodejs_22
-    nodePackages.npm
-    nodePackages.typescript
+    typescript
     typescript-language-server
-    nodePackages.vscode-langservers-extracted # JSON, HTML, CSS, ESLint
-    nodePackages.prettier
-    nodePackages.eslint
+    vscode-langservers-extracted # JSON, HTML, CSS, ESLint
+    prettier
+    eslint
 
     # Docker
     docker-compose-language-service
