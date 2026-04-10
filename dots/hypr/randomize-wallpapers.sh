@@ -12,7 +12,7 @@ sleep 1
 # Set random wallpaper for each monitor
 for MONITOR in $MONITORS; do
     RANDOM_WALLPAPER=$(find "$WALLPAPER_DIR" -type f | shuf -n 1)
-    swww img "$RANDOM_WALLPAPER" --transition-type center -o "$MONITOR"
+    awww img "$RANDOM_WALLPAPER" --transition-type center -o "$MONITOR"
     # Small delay between setting wallpapers to avoid potential issues
     sleep 0.5
 done
