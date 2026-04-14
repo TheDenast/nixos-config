@@ -6,6 +6,7 @@
     vim # grandpa
     neovim-unwrapped # THE editor
     code-cursor # AI IDE built on VS-Code
+    cursor-cli # cli version of cursor
 
     # Git
     git # versioning software
