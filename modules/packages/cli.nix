@@ -36,6 +36,7 @@
     mgitstatus # quickly see status of git repos
     ansible # remote server orchestration software
     lshw # ls hardware
+    playerctl # Command-line utility and library for controlling media players that implement MPRIS
 
     # Fun
     fastfetch # >:P
