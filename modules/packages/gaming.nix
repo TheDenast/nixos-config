@@ -10,6 +10,7 @@
     wowup-cf # WoW addon manager
     moonlight-qt # remote game streaming
     prismlauncher # minecraft
+    mcaselector # chunk editing for minecraft
     godot # game engine
     piper # software to configure logitech mice
     vintagestory # this is not minecraft btw
