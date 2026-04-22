@@ -13,7 +13,6 @@
     mcaselector # chunk editing for minecraft
     godot # game engine
     piper # software to configure logitech mice
-    vintagestory # this is not minecraft btw
     openmw # OSS Morrowind Engine
 
     # GPU / Vulkan
