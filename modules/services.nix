@@ -97,4 +97,32 @@
   services.fwupd.package = pkgs.fwupd;
 
   services.ratbagd.enable = true;
+
+  systemd.user.services.activitywatch = {
+    description = "ActivityWatch server";
+    wantedBy = [ "graphical-session.target" ];
+    after = [ "graphical-session.target" ];
+    serviceConfig = {
+      ExecStart = "${pkgs.aw-server-rust}/bin/aw-server";
+      Restart = "on-failure";
+      RestartSec = 5;
+    };
+  };
+
+  systemd.user.services.aw-awatcher = {
+    description = "AWatcher - Wayland-compatible ActivityWatch watcher";
+    wantedBy = [ "graphical-session.target" ];
+    after = [
+      "activitywatch.service"
+      "graphical-session.target"
+    ];
+    requires = [ "activitywatch.service" ];
+    serviceConfig = {
+      ExecStart = "${pkgs.awatcher}/bin/awatcher --idle-timeout 180 --poll-time-idle 10 --poll-time-window 5";
+      Restart = "on-failure";
+      RestartSec = 5;
+      # Wait a bit for ActivityWatch server to be ready
+      ExecStartPre = "${pkgs.coreutils}/bin/sleep 5";
+    };
+  };
 }
