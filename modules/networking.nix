@@ -17,6 +17,7 @@
     enable = true;
     package = pkgs.mullvad-vpn;
   };
+  services.resolved.enable = true;
 
   services.tailscale = {
     enable = true;
@@ -25,7 +26,7 @@
 
   services.openvpn.servers = {
     amplified = {
-      config = ''config /home/denast/.secrets/amplified_vpn.conf '';
+      config = "config /home/denast/.secrets/amplified_vpn.conf ";
       updateResolvConf = true;
       autoStart = false;
     };
