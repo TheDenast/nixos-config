@@ -29,6 +29,9 @@
 
     # Go
     go # google something something language
+    gopls # language server for golang
+    gofumpt # stricter golang formatter
+    gotools # additional tools for golang
 
     # Lua
     lua # Lua language
