@@ -41,6 +41,5 @@
     fw-ectool # framework embedded controller tool (mainly for manual fan control)
     python313Packages.passlib # need it for matrix ansible
     just # need it for matrix ansible
-    activitywatch # time tracker
   ];
 }
