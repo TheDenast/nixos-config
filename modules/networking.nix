@@ -31,4 +31,7 @@
       autoStart = false;
     };
   };
+
+  # layer over ssh for nicer latency
+  programs.mosh.enable = true;
 }
