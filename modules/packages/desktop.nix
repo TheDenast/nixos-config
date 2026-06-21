@@ -4,7 +4,7 @@
   environment.systemPackages = with pkgs; [
     # Hyprland ecosystem
     waybar # bar for hyprland
-    swww # wallpapers
+    awww # wallpapers
     dunst # notifications
     walker # app runner
     elephant # backend for walker (methinks??)
@@ -27,12 +27,12 @@
     flameshot # all-in-one screenshot tool
 
     # Desktop apps
-    xfce.thunar # file manager
+    thunar # file manager
     networkmanagerapplet # network applet
     pavucontrol # pulse audio control
     brightnessctl # used to control screen backlight
     # AppImages are handled via programs.appimage binfmt in configuration.nix
-    xorg.xhost # gparted doesn't start on wayland without it
+    xhost # gparted doesn't start on wayland without it
     xclip # something something xorg clipboard
     lxqt.lxqt-policykit # polkit
     openrazer-daemon # allows to use razer devices

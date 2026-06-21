@@ -45,7 +45,7 @@
     black # uncompromising python formatter
 
     # Nix
-    nixfmt-rfc-style # opinionated formatter for Nix
+    nixfmt # opinionated formatter for Nix
     nixd # Nix lsp (configurable but heavy)
     nil # Nix lsp (light but basic)
 
