@@ -31,7 +31,6 @@
   boot.kernelParams = [
     "quiet"
     "loglevel=3"
-    "rd.systemd.show_status=false"
     "rd.udev.log_level=3"
     "udev.log_priority=3"
   ];
@@ -39,7 +38,7 @@
   boot.initrd.verbose = false;
 
   fileSystems."/" = {
-    device = "/dev/disk/by-uuid/aa6989aa-6f70-4712-b8aa-fbfba346b478";
+    device = "/dev/mapper/luks-258f7838-387b-4f19-b0ed-ebe2678fdbe4";
     fsType = "ext4";
   };
 
@@ -58,7 +57,7 @@
   };
 
   swapDevices = [
-    { device = "/dev/disk/by-uuid/01a8e08f-7c6b-424c-b503-548a71093d3e"; }
+    { device = "/dev/mapper/luks-08590cd3-3382-4dab-9105-563597bafc67"; }
   ];
 
   # Enables DHCP on each ethernet and wireless interface. In case of scripted networking
