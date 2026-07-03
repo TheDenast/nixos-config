@@ -13,6 +13,7 @@ alias mgs='mgitstatus -d 3 --no-upstream -c /home/denast/files /home/denast/.nix
 alias nixos-update='nix flake update --flake /home/denast/.nixos-config && sudo nixos-rebuild switch --flake /home/denast/.nixos-config#framework-13 && git -C /home/denast/.nixos-config add flake.lock && git -C /home/denast/.nixos-config commit -m "flake: update inputs"'
 alias sl='sl -w -10 -d'
 alias vpn-browser='bash /home/denast/.dots/scripts/tailscale-vpn-browser.sh'
+alias aclaude='CLAUDE_CONFIG_DIR=~/.amplified-claude claude'
 setenv EDITOR nvim
 source /home/denast/.secrets/api-keys.fish
 fish_add_path $HOME/.cargo/bin
