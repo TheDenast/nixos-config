@@ -7,6 +7,8 @@
 ├── flake.nix                    # Flake entry point (inputs, outputs, formatter)
 ├── configuration.nix            # Shared system config (locale, GC, auto-upgrade, virtualisation)
 ├── home.nix                     # Home Manager (dotfiles, direnv, GTK theme, mime apps)
+├── dots/                        # App dotfiles, symlinked out-of-store via home.nix
+│   └── nvim/                    # Separate repo (TheDenast/nvim-config), gitignored here
 ├── hosts/
 │   └── framework-13/
 │       ├── default.nix          # Host entry (hostname)
@@ -29,13 +31,13 @@
 
 ```sh
 # Rebuild and switch immediately
-sudo nixos-rebuild switch --flake /home/denast/.nixos-config#framework-13
+sudo nixos-rebuild switch --flake '/home/denast/files/3_technology/30_configs/30-00_$nixos-config#framework-13'
 
 # Rebuild into bootloader only (activate on next reboot)
-sudo nixos-rebuild boot --flake /home/denast/.nixos-config#framework-13
+sudo nixos-rebuild boot --flake '/home/denast/files/3_technology/30_configs/30-00_$nixos-config#framework-13'
 
 # Update flake inputs
-cd /home/denast/.nixos-config && nix flake update
+cd '/home/denast/files/3_technology/30_configs/30-00_$nixos-config' && nix flake update
 
 # Format all Nix files
 nix fmt
@@ -59,6 +61,7 @@ Manual `nix flake update` + rebuild is still needed if you want to update inputs
 ## Initial setup
 
 ```sh
-git clone https://github.com/TheDenast/nixos-config.git /home/denast/.nixos-config
-sudo nixos-rebuild switch --flake /home/denast/.nixos-config#framework-13
+git clone https://github.com/TheDenast/nixos-config.git '/home/denast/files/3_technology/30_configs/30-00_$nixos-config'
+git clone https://github.com/TheDenast/nvim-config.git '/home/denast/files/3_technology/30_configs/30-00_$nixos-config/dots/nvim'
+sudo nixos-rebuild switch --flake '/home/denast/files/3_technology/30_configs/30-00_$nixos-config#framework-13'
 ```

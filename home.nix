@@ -1,5 +1,9 @@
 { config, pkgs, ... }:
 
+let
+  # Live-editable dotfiles inside this repo ($ is literal, not interpolation)
+  dotsDir = "/home/denast/files/3_technology/30_configs/30-00_$nixos-config/dots";
+in
 {
   home.username = "denast";
   home.homeDirectory = "/home/denast";
@@ -35,23 +39,23 @@
   programs.home-manager.enable = true;
 
   home.file = {
-    ".config/btop".source = config.lib.file.mkOutOfStoreSymlink "/home/denast/.dots/btop";
-    ".config/dunst".source = config.lib.file.mkOutOfStoreSymlink "/home/denast/.dots/dunst";
-    ".config/fish".source = config.lib.file.mkOutOfStoreSymlink "/home/denast/.dots/fish";
-    ".config/xonsh".source = config.lib.file.mkOutOfStoreSymlink "/home/denast/.dots/xonsh";
-    ".config/nushell".source = config.lib.file.mkOutOfStoreSymlink "/home/denast/.dots/nushell";
-    ".config/fusuma".source = config.lib.file.mkOutOfStoreSymlink "/home/denast/.dots/fusuma";
-    ".config/hypr".source = config.lib.file.mkOutOfStoreSymlink "/home/denast/.dots/hypr";
-    ".config/kitty".source = config.lib.file.mkOutOfStoreSymlink "/home/denast/.dots/kitty";
-    ".config/neofetch".source = config.lib.file.mkOutOfStoreSymlink "/home/denast/.dots/neofetch";
-    ".config/nvim".source = config.lib.file.mkOutOfStoreSymlink "/home/denast/.dots/nvim";
-    ".config/ranger".source = config.lib.file.mkOutOfStoreSymlink "/home/denast/.dots/ranger";
-    ".config/rofi".source = config.lib.file.mkOutOfStoreSymlink "/home/denast/.dots/rofi";
+    ".config/btop".source = config.lib.file.mkOutOfStoreSymlink "${dotsDir}/btop";
+    ".config/dunst".source = config.lib.file.mkOutOfStoreSymlink "${dotsDir}/dunst";
+    ".config/fish".source = config.lib.file.mkOutOfStoreSymlink "${dotsDir}/fish";
+    ".config/xonsh".source = config.lib.file.mkOutOfStoreSymlink "${dotsDir}/xonsh";
+    ".config/nushell".source = config.lib.file.mkOutOfStoreSymlink "${dotsDir}/nushell";
+    ".config/fusuma".source = config.lib.file.mkOutOfStoreSymlink "${dotsDir}/fusuma";
+    ".config/hypr".source = config.lib.file.mkOutOfStoreSymlink "${dotsDir}/hypr";
+    ".config/kitty".source = config.lib.file.mkOutOfStoreSymlink "${dotsDir}/kitty";
+    ".config/neofetch".source = config.lib.file.mkOutOfStoreSymlink "${dotsDir}/neofetch";
+    ".config/nvim".source = config.lib.file.mkOutOfStoreSymlink "${dotsDir}/nvim";
+    ".config/ranger".source = config.lib.file.mkOutOfStoreSymlink "${dotsDir}/ranger";
+    ".config/rofi".source = config.lib.file.mkOutOfStoreSymlink "${dotsDir}/rofi";
     ".config/starship.toml".source =
-      config.lib.file.mkOutOfStoreSymlink "/home/denast/.dots/starship.toml";
-    ".config/swappy".source = config.lib.file.mkOutOfStoreSymlink "/home/denast/.dots/swappy";
-    ".config/waybar".source = config.lib.file.mkOutOfStoreSymlink "/home/denast/.dots/waybar";
-    ".config/wofi".source = config.lib.file.mkOutOfStoreSymlink "/home/denast/.dots/wofi";
+      config.lib.file.mkOutOfStoreSymlink "${dotsDir}/starship.toml";
+    ".config/swappy".source = config.lib.file.mkOutOfStoreSymlink "${dotsDir}/swappy";
+    ".config/waybar".source = config.lib.file.mkOutOfStoreSymlink "${dotsDir}/waybar";
+    ".config/wofi".source = config.lib.file.mkOutOfStoreSymlink "${dotsDir}/wofi";
   };
 
   home.pointerCursor = {
