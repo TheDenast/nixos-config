@@ -45,6 +45,10 @@ window#waybar {
   border-radius: 5px;
   color: @purple;
 }
+#clock.est {
+  padding: 0 10px;
+  color: @cyan;
+}
 
 #privacy,
 #tray,
