@@ -24,7 +24,7 @@
   nix.daemonCPUSchedPolicy = "idle";
   nix.daemonIOSchedClass = "idle";
 
-  time.timeZone = "Asia/Yerevan";
+  time.timeZone = "Europe/Belgrade";
   i18n.defaultLocale = "en_US.UTF-8";
   i18n.extraLocaleSettings = {
     LC_ADDRESS = "en_US.UTF-8";
