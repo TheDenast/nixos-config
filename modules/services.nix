@@ -8,6 +8,9 @@
   # Needed for secret saving on hyprland
   services.gnome.gnome-keyring.enable = true;
 
+  # Unlock keyring automatically when logging in at TTY (used with startx)
+  security.pam.services.login.enableGnomeKeyring = true;
+
   services.xserver.videoDrivers = [
     "amdgpu"
   ];
