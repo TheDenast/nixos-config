@@ -3,6 +3,7 @@
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-26.05";
+    nixpkgs-unstable.url = "github:NixOS/nixpkgs/nixos-unstable";
     home-manager = {
       url = "github:nix-community/home-manager/release-26.05";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -14,6 +15,7 @@
     {
       self,
       nixpkgs,
+      nixpkgs-unstable,
       home-manager,
       nixos-hardware,
       ...
@@ -25,6 +27,17 @@
         permittedInsecurePackages = [ "segger-jlink-qt4-810" ];
         segger-jlink.acceptLicense = true;
       };
+
+      # Packages pulled from unstable until their updates reach stable
+      unstableOverlay = final: prev: {
+        inherit
+          (import nixpkgs-unstable {
+            inherit system;
+            config = nixpkgsConfig;
+          })
+          protonup-qt
+          ;
+      };
     in
     {
       formatter.x86_64-linux = nixpkgs.legacyPackages.x86_64-linux.nixfmt;
@@ -34,7 +47,10 @@
           inherit system;
           specialArgs = { inherit inputs; };
           modules = [
-            { nixpkgs.config = nixpkgsConfig; }
+            {
+              nixpkgs.config = nixpkgsConfig;
+              nixpkgs.overlays = [ unstableOverlay ];
+            }
             ./configuration.nix
             ./hosts/framework-13
             nixos-hardware.nixosModules.framework-13-7040-amd
