@@ -34,6 +34,7 @@
             config = nixpkgsConfig;
           })
           protonup-qt
+          claude-code
           ;
       };
     in
