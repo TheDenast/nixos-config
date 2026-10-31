@@ -64,7 +64,6 @@
     pgadmin4-desktopmode # Administration and development platform for PostgreSQL
     postman # API development
     bruno # API dev
-    nrfconnect # Nordic Semiconductor nRF Connect for Desktop
     awscli2 # for AWS work
     android-tools # adb and friends
     openvpn # for connection to corporate vpn
