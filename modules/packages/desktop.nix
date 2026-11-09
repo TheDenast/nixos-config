@@ -34,6 +34,8 @@
     # AppImages are handled via programs.appimage binfmt in configuration.nix
     xhost # gparted doesn't start on wayland without it
     xclip # something something xorg clipboard
+    xrandr # sets the xwayland primary monitor (xwayland-primary.sh)
+    socat # listens to hyprland events (xwayland-primary.sh)
     lxqt.lxqt-policykit # polkit
     openrazer-daemon # allows to use razer devices
 
